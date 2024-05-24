@@ -1,7 +1,40 @@
-# Group `protocol_id` in each `exam_id`
+# Hierarchical structure Levels
+# `category` -> `exam` -> `protocol`
+
+# Level 1 
+category = ["Body", "Neuro"]
+
+# Level 2
+## Map `exam_id` to `exam_name`
+## The order of this dict appeared in drop down
+exam_id_name = {
+    "Body": {
+        # exam_id: exam_name
+        "ct_wa": "CTWA",
+        "cta_wa": "CTA Whole Abd",
+        "ct_upperabd": "CT Upper Abd",
+        "ct_lowerabd": "CT Lower Abd",
+        "ct_kub": "CT KUB",
+        "cta_pe": "CTA for PE",
+        "ct_chest": "CT Chest",
+        "cta_chest": "CTA Chest",
+        "cta_aorta": "CTA Whole Aorta",
+        "cta_runoff": "CTA runoff"
+    },
+    "Neuro": {
+        "ct_brain_nc": "CT Brain (non-contrast)",
+        "ct_brain_with_cm": "CT Brain with Contrast",
+        "cta_ctv_brain": "CTA/CTV Brain",
+        "ct_neuro_trauma": "CT Neuro Trauma"
+    }
+}
+
+# Level 3
+## Group `protocol_id` in each `exam_id`
 ## The order of element in this list appeared in drop down
-id_exam_protocols = {
-    "ct_wa": ["ct_wa_routine", 
+exam_id_protocol_id = {
+    # Body
+    "ct_wa": ["ct_wa_routine",
               "ct_wa_full",
               "ct_wa_gut_obs",
               "ct_wa_infect",
@@ -15,7 +48,7 @@ id_exam_protocols = {
               "ct_wa_kidney_mass",
               "ct_wa_gi_mass"],
     "cta_wa": ["cta_wa_mesenteric_ischemia",
-               "cta_wa_gi_bleed", 
+               "cta_wa_gi_bleed",
                "cta_wa_aaa_rupture"],
     "ct_upperabd": [
         "ct_upperabd_routine",
@@ -45,7 +78,7 @@ id_exam_protocols = {
         "ct_chest_svc"
     ],
     "cta_chest": [
-        "cta_chest_hemoptysis", 
+        "cta_chest_hemoptysis",
         "cta_chest_trauma"
     ],
     "cta_aorta": {
@@ -56,31 +89,29 @@ id_exam_protocols = {
     "cta_runoff": {
         "cta_runoff_old",
         "cta_runoff_young"
+    },
+    # Neuro
+    "ct_brain_nc": {
+        "ct_brain_nc_routine"
+    },
+    "ct_brain_with_cm": {
+        "ct_brain_with_cm_routine"
+    },
+    "cta_ctv_brain": {
+        "cta_brain_aneurysm",
+        "ctv_brain_vst"
+    },
+    "ct_neuro_trauma": {
+        "cta_neck_trauma"
     }
 }
 
-
-# Map `exam_id` to `exam_name`
-## The order of this dict appeared in drop down
-exam_id_name = {
-    # exam_id: exam_name
-   "ct_wa": "CTWA",
-   "cta_wa": "CTA Whole Abd",
-   "ct_upperabd": "CT Upper Abd",
-   "ct_lowerabd": "CT Lower Abd",
-   "ct_kub": "CT KUB",
-   "cta_pe": "CTA for PE",
-   "ct_chest": "CT Chest",
-   "cta_chest": "CTA Chest",
-   "cta_aorta": "CTA Whole Aorta",
-   "cta_runoff": "CTA runoff"
-}
 
 # Map `protocol_id` to `protocol_name`
 protocols_id_name = {
     # CTWA
     "ct_wa_routine": "Routine WA",
-    "ct_wa_full": "Full WA", 
+    "ct_wa_full": "Full WA",
     "ct_wa_gut_obs": "Gut Obstruction",
     "ct_wa_infect": "Intra-abdominal infection",
     "ct_wa_leak_fist_collect": "Leak-Fistula-Collection",
@@ -101,7 +132,7 @@ protocols_id_name = {
     "ct_lowerabd_appendix": "Appendicitis",
     # CT KUB
     "ct_kub_nc": "CT KUB (non-contrast)",
-    "ct_kub_stone": "KUB Stone", 
+    "ct_kub_stone": "KUB Stone",
     "ct_kub_hematuria": "Hematuria",
     "ct_kub_kidney_mass": "Kidney mass/Abscess",
     # CTA WA
@@ -119,7 +150,7 @@ protocols_id_name = {
     "ct_chest_dysphagia": "Dysphagia",
     "ct_chest_eso": "CT esophagogram",
     "ct_chest_svc": "SVC Obstruction",
-    
+
     # CTA Chest
     "cta_chest_hemoptysis": "Hemoptysis",
     "cta_chest_trauma": "CTA Chest trauma",
@@ -129,29 +160,38 @@ protocols_id_name = {
     "cta_aorta_aaa_postop": "AAA Post-op",
     # CTA Runoff
     "cta_runoff_old": "CTA Runoff",
-    "cta_runoff_young": "CTA Runoff (< 60 yr)"
+    "cta_runoff_young": "CTA Runoff (< 60 yr)",
+    # CT Brain (NC)
+    "ct_brain_nc_routine": "CT Brain (non-contrast)",
+    # CTA/CTV Brain
+    "cta_brain_aneurysm": "Intracranial aneurysm",
+    "ctv_brain_vst": "Venous Sinus Thrombosis",
+    # CT Brain with CM
+    "ct_brain_with_cm_routine": "CT Brain with Contrast",
+    # CT Neuro Trauma
+    "cta_neck_trauma": "CT Neck Trauma"
 }
 
 
 # Actual Protocols
 protocols = {
     # by `protocol_id`
-    
+
     # CTWA
-    ## Routine WA
+    # Routine WA
     "ct_wa_routine": {
         "protocol_name": protocols_id_name["ct_wa_routine"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Venous (whole)
 - Delay (liver)
 """,
         "contrast_text": "Oral (limited water), Rectal (water)"
     },
-    ## Full WA
+    # Full WA
     "ct_wa_full": {
         "protocol_name": None,
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Plain (whole)
 - Late A (upper)
@@ -159,11 +199,11 @@ protocols = {
 - Delay (liver)
 """,
         "contrast_text": "Oral (?), Rectal (?)"
-    },  
-    ## Solid Organ Rupture
+    },
+    # Solid Organ Rupture
     "ct_wa_solid_rupture": {
         "protocol_name": protocols_id_name["ct_wa_solid_rupture"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Plain (whole)
 - Late A (upper)
@@ -172,40 +212,40 @@ protocols = {
 """,
         "contrast_text": "No oral, No rectal"
     },
-    ## Free Air
+    # Free Air
     "ct_wa_free_air": {
         "protocol_name": protocols_id_name["ct_wa_free_air"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Plain
 - Venous (may be)
 """,
         "contrast_text": "Oral (positive), Rectal (positive) [If not stable -> no oral, no rectal]"
     },
-    ## GI Perforate
+    # GI Perforate
     "ct_wa_gi_perforate": {
         "protocol_name": protocols_id_name["ct_wa_gi_perforate"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Venous
 - Delay (liver)
 """,
         "contrast_text": "Oral (limited positive), Rectal (positive)"
     },
-    ## Gut Obstruction 
+    # Gut Obstruction
     "ct_wa_gut_obs": {
         "protocol_name": protocols_id_name["ct_wa_gut_obs"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Venous (whole)
 - Delay 3 min (liver)
 """,
         "contrast_text": "No oral, No rectal"
     },
-    ## HBP mass/abscess (CTWA)
+    # HBP mass/abscess (CTWA)
     "ct_wa_hbp_mass": {
         "protocol_name": protocols_id_name["ct_wa_hbp_mass"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Plain (upper)
 - Late A (upper)
@@ -214,10 +254,10 @@ protocols = {
 """,
         "contrast_text": "Oral (limited water), No rectal"
     },
-    ## Kidney mass/abscess
+    # Kidney mass/abscess
     "ct_wa_kidney_mass": {
         "protocol_name": protocols_id_name["ct_wa_kidney_mass"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Plain (KUB)
 - Late A (upper)
@@ -226,30 +266,30 @@ protocols = {
 """,
         "contrast_text": "Oral (limited water), No rectal"
     },
-    ## GI Mass
+    # GI Mass
     "ct_wa_gi_mass": {
         "protocol_name": protocols_id_name["ct_wa_gi_mass"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Venous (whole)
 - Delay (liver)
 """,
         "contrast_text": "Oral (full positive), Rectal (water)"
     },
-    ## Diverticulitis
+    # Diverticulitis
     "ct_wa_diver": {
         "protocol_name": protocols_id_name["ct_wa_diver"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Venous (whole)
 - Delay (liver)
 """,
         "contrast_text": "Oral (limited water), Rectal (1 L, positive CM)"
     },
-    ## Pancreatitis
+    # Pancreatitis
     "ct_wa_pancrea": {
         "protocol_name": protocols_id_name["ct_wa_pancrea"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Plain (upper)
 - Late A (upper)
@@ -258,10 +298,10 @@ protocols = {
 """,
         "contrast_text": "Oral (limited water), No rectal"
     },
-    ## Intra-abdominal infection
+    # Intra-abdominal infection
     "ct_wa_infect": {
         "protocol_name": protocols_id_name["ct_wa_infect"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Plain (whole)
 - Late A (upper)
@@ -270,10 +310,10 @@ protocols = {
 """,
         "contrast_text": "Oral (limited water), Rectal (water)"
     },
-    ## Leak-Fistula-Collection
+    # Leak-Fistula-Collection
     "ct_wa_leak_fist_collect": {
         "protocol_name": protocols_id_name["ct_wa_leak_fist_collect"],
-        "exam_name": exam_id_name["ct_wa"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
         "phase_design_text": """
 - Venous (whole)
 - Delay (liver)
@@ -282,24 +322,24 @@ protocols = {
     },
     # "protocol_id": {
     #     "protocol_name": protocols_id_name["protocol_id"],
-    #     "exam_name": exam_id_name["xxx"],
+    #     "exam_name": exam_id_name["Body"]["xxx"],
     #     "phase_design_text": """""",
     #     "contrast_text": ""
     # },
-    ## Routine Upper Abd
+    # Routine Upper Abd
     "ct_upperabd_routine": {
         "protocol_name": protocols_id_name["ct_upperabd_routine"],
-        "exam_name": exam_id_name["ct_upperabd"],
+        "exam_name": exam_id_name["Body"]["ct_upperabd"],
         "phase_design_text": """
 - Venous (upper)
 - Delay (upper)
 """,
         "contrast_text": "Oral (limited water), No rectal"
     },
-    ## HBP mass/abscess (Upper)
+    # HBP mass/abscess (Upper)
     "ct_upperabd_hbp_mass": {
         "protocol_name": protocols_id_name["ct_upperabd_hbp_mass"],
-        "exam_name": exam_id_name["ct_upperabd"],
+        "exam_name": exam_id_name["Body"]["ct_upperabd"],
         "phase_design_text": """
 - Plain (upper)
 - Late A (upper)
@@ -308,10 +348,10 @@ protocols = {
 """,
         "contrast_text": "Oral (limited water), No rectal"
     },
-    ## Biliary Stone
+    # Biliary Stone
     "ct_upperabd_biliary_stone": {
         "protocol_name": protocols_id_name["ct_upperabd_biliary_stone"],
-        "exam_name": exam_id_name["ct_upperabd"],
+        "exam_name": exam_id_name["Body"]["ct_upperabd"],
         "phase_design_text": """
 - Plain (upper)
 - Late A (upper)
@@ -320,10 +360,10 @@ protocols = {
 """,
         "contrast_text": "Oral (limited water), No rectal"
     },
-    ## Adrenal mass/abscess
+    # Adrenal mass/abscess
     "ct_upperabd_adrenal_mass": {
         "protocol_name": protocols_id_name["ct_upperabd_adrenal_mass"],
-        "exam_name": exam_id_name["ct_upperabd"],
+        "exam_name": exam_id_name["Body"]["ct_upperabd"],
         "phase_design_text": """
 - Plain (upper)
 - Late A (upper)
@@ -335,21 +375,21 @@ protocols = {
     },
     # "protocol_id": {
     #     "protocol_name": protocols_id_name["protocol_id"],
-    #     "exam_name": exam_id_name["xxx"],
+    #     "exam_name": exam_id_name["Body"]["xxx"],
     #     "phase_design_text": """""",
     #     "contrast_text": ""
     # },
     # CT lower abd
     "ct_lowerabd_appendix": {
         "protocol_name": protocols_id_name["ct_lowerabd_appendix"],
-        "exam_name": exam_id_name["ct_lowerabd"],
+        "exam_name": exam_id_name["Body"]["ct_lowerabd"],
         "phase_design_text": """
 - Venous 120 sec (L3 to pubic symphysis)
 """,
         "contrast_text": "Rectal (Positive 1 L สวนถึง cecum), No oral"
     },
     # CT KUB
-    ## CT KUB (non-contrast)
+    # CT KUB (non-contrast)
     "ct_kub_nc": {
         "protocol_name": None,
         "exam_name": "CT KUB (non-contrast)",
@@ -359,7 +399,7 @@ protocols = {
 """,
         "contrast_text": "No Oral, No Rectal"
     },
-    ## KUB Stone (non-contrast)
+    # KUB Stone (non-contrast)
     "ct_kub_stone": {
         "protocol_name": protocols_id_name["ct_kub_stone"],
         "exam_name": "CT KUB (non-contrast)",
@@ -369,10 +409,10 @@ protocols = {
 """,
         "contrast_text": "No Oral, No Rectal"
     },
-    ## Hematuria
+    # Hematuria
     "ct_kub_hematuria": {
         "protocol_name": protocols_id_name["ct_kub_hematuria"],
-        "exam_name": exam_id_name["ct_kub"],
+        "exam_name": exam_id_name["Body"]["ct_kub"],
         "phase_design_text": """
 - Plain (KUB)
 - Late A (Kidney)
@@ -382,10 +422,10 @@ protocols = {
 """,
         "contrast_text": "Oral (limited water), No Rectal"
     },
-    ## Kidney mass/Abscess
+    # Kidney mass/Abscess
     "ct_kub_kidney_mass": {
         "protocol_name": protocols_id_name["ct_kub_kidney_mass"],
-        "exam_name": exam_id_name["ct_kub"],
+        "exam_name": exam_id_name["Body"]["ct_kub"],
         "phase_design_text": """
 *** If suspect renal mass → consider CTWA for staging
 - Plain (KUB)
@@ -398,15 +438,15 @@ protocols = {
     },
     # "protocol_id": {
     #     "protocol_name": protocols_id_name["protocol_id"],
-    #     "exam_name": exam_id_name["xxx"],
+    #     "exam_name": exam_id_name["Body"]["xxx"],
     #     "phase_design_text": """""",
     #     "contrast_text": ""
     # },
     # CTA WA
-    ## GI Bleed
+    # GI Bleed
     "cta_wa_gi_bleed": {
         "protocol_name": protocols_id_name["cta_wa_gi_bleed"],
-        "exam_name": exam_id_name["cta_wa"],
+        "exam_name": exam_id_name["Body"]["cta_wa"],
         "phase_design_text": """
 - Plain (whole)
 - CTA (whole)
@@ -415,10 +455,10 @@ protocols = {
 """,
         "contrast_text": "No oral, No rectal"
     },
-    ## Mesenteric Ischemia
+    # Mesenteric Ischemia
     "cta_wa_mesenteric_ischemia": {
         "protocol_name": protocols_id_name["cta_wa_mesenteric_ischemia"],
-        "exam_name": exam_id_name["cta_wa"],
+        "exam_name": exam_id_name["Body"]["cta_wa"],
         "phase_design_text": """
 - Plain (whole)
 - CTA (whole)
@@ -429,7 +469,7 @@ protocols = {
     },
     "cta_wa_aaa_rupture": {
         "protocol_name": protocols_id_name["cta_wa_aaa_rupture"],
-        "exam_name": exam_id_name["cta_wa"],
+        "exam_name": exam_id_name["Body"]["cta_wa"],
         "phase_design_text": """
 - Plain (whole)
 - CTA (maybe ถ้ามีเวลา คนไข้ stable)
@@ -440,7 +480,7 @@ protocols = {
     # CTA for PE
     "cta_pe_no_dvt": {
         "protocol_name": protocols_id_name["cta_pe_no_dvt"],
-        "exam_name": exam_id_name["cta_pe"],
+        "exam_name": exam_id_name["Body"]["cta_pe"],
         "phase_design_text": """
 - CTPA (chest)
 - Venous (chest)
@@ -449,7 +489,7 @@ protocols = {
     },
     "cta_pe_with_dvt": {
         "protocol_name": protocols_id_name["cta_pe_with_dvt"],
-        "exam_name": exam_id_name["cta_pe"],
+        "exam_name": exam_id_name["Body"]["cta_pe"],
         "phase_design_text": """
 - CTPA (chest)
 - Venous (chest, legs)
@@ -458,22 +498,22 @@ protocols = {
     },
     # "protocol_id": {
     #     "protocol_name": protocols_id_name["protocol_id"],
-    #     "exam_name": exam_id_name["xxx"],
+    #     "exam_name": exam_id_name["Body"]["xxx"],
     #     "phase_design_text": """""",
     #     "contrast_text": ""
     # },
     # CT Chest
-    ## Routine Chest
+    # Routine Chest
     "ct_chest_routine": {
         "protocol_name": protocols_id_name["ct_chest_routine"],
-        "exam_name": exam_id_name["ct_chest"],
+        "exam_name": exam_id_name["Body"]["ct_chest"],
         "phase_design_text": """
 - **maybe** plain (chest)
 - Late A (chest)
 """,
         "contrast_text": "IV contrast"
-    },   
-    ## CT Chest (non-contrast)
+    },
+    # CT Chest (non-contrast)
     "ct_chest_nc": {
         "protocol_name": None,
         "exam_name": "CT Chest (non-contrast)",
@@ -482,39 +522,39 @@ protocols = {
 """,
         "contrast_text": "No IV contrast"
     },
-    ## Nodule/mass characterization
+    # Nodule/mass characterization
     "ct_chest_nodule_mass": {
         "protocol_name": protocols_id_name["ct_chest_nodule_mass"],
-        "exam_name": exam_id_name["ct_chest"],
+        "exam_name": exam_id_name["Body"]["ct_chest"],
         "phase_design_text": """
 - Plain (chest)
 - Late A (chest)
 """,
         "contrast_text": "IV contrast"
     },
-    ## Tracheobronchomalacia
+    # Tracheobronchomalacia
     "ct_chest_tbm": {
         "protocol_name": protocols_id_name["ct_chest_tbm"],
-        "exam_name": exam_id_name["ct_chest"],
+        "exam_name": exam_id_name["Body"]["ct_chest"],
         "phase_design_text": """
 - Plain (chest, dynamic expiration)
 """,
         "contrast_text": "No IV contrast"
     },
-    ## Dysphagia
+    # Dysphagia
     "ct_chest_dysphagia": {
         "protocol_name": protocols_id_name["ct_chest_dysphagia"],
-        "exam_name": exam_id_name["ct_chest"],
+        "exam_name": exam_id_name["Body"]["ct_chest"],
         "phase_design_text": """
 - Plain (chest)
 - Venous (chest)
 """,
         "contrast_text": "IV contrast, Oral (limited water)"
     },
-    ## CT esophagogram
+    # CT esophagogram
     "ct_chest_eso": {
         "protocol_name": protocols_id_name["ct_chest_eso"],
-        "exam_name": exam_id_name["ct_chest"],
+        "exam_name": exam_id_name["Body"]["ct_chest"],
         "phase_design_text": """
 - Plain (Chest, reduced dose) ก่อนกิน CM
 - จากนั้น กิน CM 1 cup (250 ml) ที่เตียง
@@ -524,7 +564,7 @@ protocols = {
     },
     "ct_chest_svc": {
         "protocol_name": protocols_id_name["ct_chest_svc"],
-        "exam_name": exam_id_name["ct_chest"],
+        "exam_name": exam_id_name["Body"]["ct_chest"],
         "phase_design_text": """
 - Plain (Chest, reduced dose)
 - Late A (Chest)
@@ -533,10 +573,10 @@ protocols = {
         "contrast_text": "IV contrast"
     },
     # CTA Chest
-    ## Hemoptysis
+    # Hemoptysis
     "cta_chest_hemoptysis": {
         "protocol_name": protocols_id_name["cta_chest_hemoptysis"],
-        "exam_name": exam_id_name["cta_chest"],
+        "exam_name": exam_id_name["Body"]["cta_chest"],
         "phase_design_text": """
 - Plain (Chest)
 - CTA (Apex to L2) → Systemic arterial phase
@@ -545,10 +585,10 @@ protocols = {
 """,
         "contrast_text": "IV contrast"
     },
-    ## CTA Chest trauma
+    # CTA Chest trauma
     "cta_chest_trauma": {
         "protocol_name": protocols_id_name["cta_chest_trauma"],
-        "exam_name": exam_id_name["cta_chest"],
+        "exam_name": exam_id_name["Body"]["cta_chest"],
         "phase_design_text": """
 - CTA (chest)
 - Venous (chest)
@@ -556,21 +596,10 @@ protocols = {
         "contrast_text": "IV Contrast"
     },
     # CTA Aorta
-    ## Aorta first time
+    # Aorta first time
     "cta_aorta_first": {
         "protocol_name": protocols_id_name["cta_aorta_first"],
-        "exam_name": exam_id_name["cta_aorta"],
-        "phase_design_text": """
-- Plain (whole aorta)
-- CTA (whole aorta)
-- Immediate delay (whole aorta)
-""",
-        "contrast_text": "IV contrast"
-    },    
-    ## Aortic Dissection
-    "cta_aorta_dissect": {
-        "protocol_name": protocols_id_name["cta_aorta_dissect"],
-        "exam_name": exam_id_name["cta_aorta"],
+        "exam_name": exam_id_name["Body"]["cta_aorta"],
         "phase_design_text": """
 - Plain (whole aorta)
 - CTA (whole aorta)
@@ -578,10 +607,21 @@ protocols = {
 """,
         "contrast_text": "IV contrast"
     },
-    ## AAA Post-op
+    # Aortic Dissection
+    "cta_aorta_dissect": {
+        "protocol_name": protocols_id_name["cta_aorta_dissect"],
+        "exam_name": exam_id_name["Body"]["cta_aorta"],
+        "phase_design_text": """
+- Plain (whole aorta)
+- CTA (whole aorta)
+- Immediate delay (whole aorta)
+""",
+        "contrast_text": "IV contrast"
+    },
+    # AAA Post-op
     "cta_aorta_aaa_postop": {
         "protocol_name": protocols_id_name["cta_aorta_aaa_postop"],
-        "exam_name": exam_id_name["cta_aorta"],
+        "exam_name": exam_id_name["Body"]["cta_aorta"],
         "phase_design_text": """
 - Plain (whole aorta)
 - CTA (whole aorta)
@@ -592,7 +632,7 @@ protocols = {
     # CTA Runoff
     "cta_runoff_old": {
         "protocol_name": protocols_id_name["cta_runoff_old"],
-        "exam_name": exam_id_name["cta_runoff"],
+        "exam_name": exam_id_name["Body"]["cta_runoff"],
         "phase_design_text": """
 ขา → Aortic bifurcation to feet
 แขน → mid-heart to hands
@@ -601,10 +641,10 @@ protocols = {
 - Immediate delay
 """,
         "contrast_text": "IV contrast"
-    },   
+    },
     "cta_runoff_young": {
         "protocol_name": protocols_id_name["cta_runoff_young"],
-        "exam_name": exam_id_name["cta_runoff"],
+        "exam_name": exam_id_name["Body"]["cta_runoff"],
         "phase_design_text": """
 ขา → Aortic bifurcation to feet
 แขน → mid-heart to hands
@@ -612,10 +652,54 @@ protocols = {
 - Immediate delay
 """,
         "contrast_text": "IV contrast"
-    },   
+    },
+    # Neuro
+    # CT Brain
+    ## CT Brain 
+    "ct_brain_nc_routine": {
+        "protocol_name": None,
+        "exam_name": exam_id_name["Neuro"]["ct_brain_nc"],
+        "phase_design_text": None,
+        "contrast_text": "No IV contrast"
+    },
+    # CTA Brain
+    ## Intracranial aneurysm
+    "cta_brain_aneurysm": {
+        "protocol_name": protocols_id_name["cta_brain_aneurysm"],
+        "exam_name": "CTA Brain",
+        "phase_design_text": """
+- Plain, CTA, post-contrast (Brain)
+""",
+        "contrast_text": "IV contrast"
+    },
+    "ctv_brain_vst": {
+        "protocol_name": protocols_id_name["ctv_brain_vst"],
+        "exam_name": "CTV Brain",
+        "phase_design_text": """
+- Plain, CTV, post-contrast (Brain)
+""",
+        "contrast_text": "IV contrast"
+    },
+    "ct_brain_with_cm_routine": {
+        "protocol_name": None,
+        "exam_name": exam_id_name["Neuro"]["ct_brain_with_cm"],
+        "phase_design_text": """
+- Plain, post-contrast (Brain)
+""",
+        "contrast_text": "IV contrast"
+    },
+    "cta_neck_trauma": {
+        "protocol_name": protocols_id_name["cta_neck_trauma"],
+        "exam_name": exam_id_name["Neuro"]["ct_neuro_trauma"],
+        "phase_design_text": """
+- CTA (brain, neck) COW to arch
+- Post-contrast (brain)
+""",
+        "contrast_text": "IV contrast"
+    },
     # "protocol_id": {
     #     "protocol_name": protocols_id_name["protocol_id"],
-    #     "exam_name": exam_id_name["xxx"],
+    #     "exam_name": exam_id_name["Neuro"]["xxx"],
     #     "phase_design_text": """""",
     #     "contrast_text": ""
     # },
@@ -624,18 +708,25 @@ protocols = {
 
 # Reverse Mapping
 
+# Level 2 (reversed)
 ## Map `exam_name` to `exam_id`
-exam_name_id_map = {v: k for k, v in exam_id_name.items()}
+## exam_name_id = {v: k for k, v in exam_id_name.items()}
+exam_name_id = {}
 
-## Map `protocol_name` to `protocol_id`
-protocols_name_id_map = {v: k for k, v in protocols_id_name.items()}
+for key, value_dict in exam_id_name.items():
+    value_dict_inv = {v: k for k, v in value_dict.items()}
+    exam_name_id[key] = value_dict_inv
 
+# Map `protocol_name` to `protocol_id`
+protocols_name_id = {v: k for k, v in protocols_id_name.items()}
+
+# Level 3 (reversed)
 ## Group `protocol_name` in each `exam_id`
-exam_id_protocols_name_map = {}
+exam_id_protocol_name = {}
 
-## Loop through each key and list in dict1
-for key, value_list in id_exam_protocols.items():
+# Loop through each key and list in dict1
+for key, value_list in exam_id_protocol_id.items():
     # Map each value in the list to its corresponding value in dict2
     mapped_list = [protocols_id_name[value] for value in value_list]
     # Store the mapped list in the result dictionary
-    exam_id_protocols_name_map[key] = mapped_list
+    exam_id_protocol_name[key] = mapped_list

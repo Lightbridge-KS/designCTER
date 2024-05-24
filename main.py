@@ -10,10 +10,10 @@ from flet import (
 )
 import designcter
 from designcter.proto import (
-    exam_id_name, 
-    exam_name_id_map, 
-    protocols_name_id_map,
-    exam_id_protocols_name_map
+    category,
+    exam_id_name, exam_name_id,
+    exam_id_protocol_name,
+    protocols_name_id, 
 )
 from designcter._utils import dash_if_blank
 
@@ -21,13 +21,20 @@ from designcter._utils import dash_if_blank
 class InputDesign(ft.UserControl):
     def __init__(self):
         super().__init__()
-        ## Input: Exam Name
+        ## DropDown 1: Category
+        self.input_category = ft.Dropdown(
+            label="Category", hint_text="Category",
+            options=[ft.dropdown.Option(x) for x in category],
+            on_change=self.input_category_changed
+        )
+        
+        ## DropDown 2: Exam Name
         self.input_exam_name = ft.Dropdown(
             label="Exam", hint_text="Type of Study",
-            options=[ft.dropdown.Option(x) for x in exam_id_name.values()],
+            # options=[ft.dropdown.Option(x) for x in exam_id_name.values()],
             on_change=self.input_exam_name_changed
         )
-        ## Input: Protocol Name
+        ## DropDown 3: Protocol Name
         self.input_protocol_name = ft.Dropdown(
             label="Protocol", hint_text="Protocol Name",
             on_change=self.input_protocol_name_changed
@@ -53,28 +60,36 @@ class InputDesign(ft.UserControl):
         self.input_ref_phy_name = ft.TextField(label="Ref physician name", hint_text="Name of Ref physician")
         ## TextField: ref_phy_tel
         self.input_ref_phy_tel = ft.TextField(label="Ref physician tel", hint_text="PCT of Ref physician")
+    
+    # Level 1 DropDown
+    def input_category_changed(self, e):
+        print(f"Dropdown Category: {self.input_category.value}")
         
-        
-        
-    def input_exam_name_changed(self, e):
-        print(f"Dropdown Exam: {self.input_exam_name.value}")
+        exam_id_name_selected = exam_id_name[self.input_category.value]
+        ## Update Level 2 DropDown Option
+        self.input_exam_name.options = [ft.dropdown.Option(x) for x in exam_id_name_selected.values()]
         self.input_exam_name.update()
         
-        # Value of `input_protocol_name` depend on `input_exam_name`
-        exam_id = exam_name_id_map[self.input_exam_name.value]
-        protocol_names = exam_id_protocols_name_map[exam_id]
-        self.input_protocol_name.options = [ft.dropdown.Option(x) for x in protocol_names]
+    # Level 2 DropDown
+    def input_exam_name_changed(self, e):
+        print(f"Dropdown Exam: {self.input_exam_name.value}")
+        
+        exam_id_selected = exam_name_id[self.input_category.value][self.input_exam_name.value]
+        protocol_names_selected = exam_id_protocol_name[exam_id_selected]
+        
+        self.input_protocol_name.options = [ft.dropdown.Option(x) for x in protocol_names_selected]
         self.input_protocol_name.update()
         
+
     def input_protocol_name_changed(self, e):
         print(f"Dropdown Protocol: {self.input_protocol_name.value}")
-        self.input_protocol_name.update()
 
     ## Build Input UI
     def build(self):
         return Container(
             content=Column(
-                [self.input_exam_name,
+                [self.input_category,
+                 self.input_exam_name,
                  self.input_protocol_name,
                  Row([self.input_ETT, self.input_C1, self.input_pregnancy], alignment=ft.MainAxisAlignment.START),
                  Row([self.input_eGFR_value, self.input_eGFR_date], alignment=ft.MainAxisAlignment.START),
@@ -88,7 +103,7 @@ class InputDesign(ft.UserControl):
     ## Get All Selected Input Values
     def get(self):
         out = {
-            "protocol_id": protocols_name_id_map[self.input_protocol_name.value],
+            "protocol_id": protocols_name_id[self.input_protocol_name.value],
             "NPO_time": dash_if_blank(self.input_NPO_time.value),
             "eGFR_value": dash_if_blank(self.input_eGFR_value.value), 
             "eGFR_date": self.input_eGFR_date.value,
@@ -176,8 +191,8 @@ def main(page: ft.Page):
     # Page Size
     page.window_min_width = 780
     page.window_width = 780
-    page.window_min_height = 725
-    page.window_height = 725
+    page.window_min_height = 790
+    page.window_height = 790
     # App Bar
     page.appbar = ft.CupertinoAppBar(
         leading=ft.Icon(ft.icons.PALETTE),

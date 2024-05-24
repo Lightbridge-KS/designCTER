@@ -21,13 +21,17 @@ def design_ct(protocol_id: str,
               ):
     
     protocol = protocols[protocol_id]
+    # Protocol Name Line
     ptc_nm = protocol['protocol_name']
     protocol_name_line = "" if ptc_nm is None else f"\nProtocol name: {ptc_nm}"
+    # Phase Design Line
+    pdt = protocol["phase_design_text"]
+    phase_design_line = "" if pdt is None else f"\n{pdt.strip()}"
     
     str_design = design_template["cter_gen"].format(
         exam_name = protocol["exam_name"],
         protocol_name_line = protocol_name_line,
-        phase_design_text = protocol["phase_design_text"].strip(),
+        phase_design_line = phase_design_line,
         contrast_text = protocol["contrast_text"],
         NPO_time_text = NPO_time,
         eGFR_date_text = eGFR_date,

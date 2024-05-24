@@ -1,4 +1,4 @@
-body_id_exam_protocols = {
+body_exam_id_protocol_id = {
     "ct_wa": ["ct_wa_routine"],
     "ct_kub": ["ct_kub_nc", "ct_kub_stone"]
 }
