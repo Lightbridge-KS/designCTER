@@ -3,7 +3,7 @@ image:
 - macOS
 
 skip_branch_with_pr: true
-stack: python 3.10.10
+stack: python 3.10
 
 environment:
   GITHUB_TOKEN:
