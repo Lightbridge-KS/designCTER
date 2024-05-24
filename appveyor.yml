@@ -1,0 +1,55 @@
+image:
+- Visual Studio 2019
+- macOS
+
+skip_branch_with_pr: true
+stack: python 3.10.10
+
+environment:
+  GITHUB_TOKEN:
+    secure: cq5sCIvjUPBY6V+SOp37WUp2wVX0g0XpSdAEg9sByCNvhKeGI+JWLSP8cjcligrB+oHCUyJVnWflZn00Tw5qjg5DgUHFysqZN1hW+QuCJa2fQgrgmgISVQOn3ol96GDD
+
+install:
+- pip install -r requirements.txt
+- pip install pyinstaller pillow
+
+build_script:
+- flet pack main.py --name DesignCTER --icon assets/icon.png --product-name DesignCTER --product-version "0.0.1" --copyright "Copyright (c) 2024 Lightbridge-KS."
+
+test: off
+
+# Publish artifacts to GitHub Releases on "tag" builds
+deploy:
+  provider: GitHub
+  auth_token: $(GITHUB_TOKEN)
+  on:
+    APPVEYOR_REPO_TAG: true
+
+#
+#   Windows package
+# 
+for:
+-
+  matrix:
+    only:
+    - image: Visual Studio 2019
+
+  after_build:
+  - 7z a DesignCTER-windows.zip %CD%\dist\*.exe
+
+  artifacts:
+  - path: DesignCTER-windows.zip
+
+#
+#   macOS package
+# 
+-
+  matrix:
+    only:
+    - image: macOS
+
+  after_build:
+  - tar -czvf DesignCTER-macos.tar.gz -C dist DesignCTER.app
+
+  artifacts:
+  - path: DesignCTER-macos.tar.gz
