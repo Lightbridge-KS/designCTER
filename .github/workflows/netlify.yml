@@ -1,0 +1,44 @@
+name: Build and Deploy to Netlify
+on:
+  push:
+  pull_request:
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+            python-version: '3.10.10'  # Specify the Python version
+      # ( Build to ./dist or other directory... )
+      - name: Install Flutter SKD
+        uses: subosito/flutter-action@v2
+        with:
+            channel: 'stable'
+
+      - name: Install Python Dependencies
+        run: |
+            pip install -r requirements.txt
+    
+      - name: Build Web
+        run: |
+            flet build web
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2
+        with:
+          publish-dir: './build/web'
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message:
+            'Deploy from GHA: ${{ github.event.pull_request.title || github.event.head_commit.message }} (${{ github.sha }})'
+          # If `true`, GHA will comment with a link to deploy preview as triggered by:
+          enable-pull-request-comment: true # Pull Request.
+          enable-commit-comment: false  # Push directly to `production-branch` (i.e., main).
+          # If `true`, GHA will display a "check" (✔️) for a successful "Netlify deployment".
+          enable-commit-status: true 
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
