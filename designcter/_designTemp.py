@@ -1,6 +1,5 @@
 design_template = {
-    "cter_gen": """Exam: {exam_name}
-Protocol name: {protocol_name}
+    "cter_gen": """Exam: {exam_name} {protocol_name_line}
 {phase_design_text}
 Contrast route: {contrast_text}
 NPO time: {NPO_time_text}

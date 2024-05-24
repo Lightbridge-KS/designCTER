@@ -8,7 +8,7 @@ from ._utils import bool_yesno
 def design_ct(protocol_id: str, 
               NPO_time: str = "-",
               eGFR_value: str = "-", 
-              eGFR_date: datetime.date = datetime.date.today(),
+              eGFR_date: str = datetime.date.today().strftime('%d/%m/%Y'),
               renal_premed: str = "-",
               allergy_premed: str = "-",
               pregnancy: bool = False,
@@ -21,14 +21,16 @@ def design_ct(protocol_id: str,
               ):
     
     protocol = protocols[protocol_id]
+    ptc_nm = protocol['protocol_name']
+    protocol_name_line = "" if ptc_nm is None else f"\nProtocol name: {ptc_nm}"
     
     str_design = design_template["cter_gen"].format(
         exam_name = protocol["exam_name"],
-        protocol_name = protocol["protocol_name"],
+        protocol_name_line = protocol_name_line,
         phase_design_text = protocol["phase_design_text"].strip(),
         contrast_text = protocol["contrast_text"],
         NPO_time_text = NPO_time,
-        eGFR_date_text = eGFR_date.strftime('%d/%m/%Y'),
+        eGFR_date_text = eGFR_date,
         eGFR_value_text = eGFR_value,
         renal_premed_text = renal_premed,
         allergy_premed_text = allergy_premed,
