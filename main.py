@@ -10,7 +10,7 @@ from flet import (
 )
 import designcter
 from designcter.proto import (
-    exam_id_name_map, 
+    exam_id_name, 
     exam_name_id_map, 
     protocols_name_id_map,
     exam_id_protocols_name_map
@@ -24,7 +24,7 @@ class InputDesign(ft.UserControl):
         ## Input: Exam Name
         self.input_exam_name = ft.Dropdown(
             label="Exam", hint_text="Type of Study",
-            options=[ft.dropdown.Option(x) for x in exam_id_name_map.values()],
+            options=[ft.dropdown.Option(x) for x in exam_id_name.values()],
             on_change=self.input_exam_name_changed
         )
         ## Input: Protocol Name
