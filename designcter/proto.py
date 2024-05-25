@@ -2,7 +2,7 @@
 # `category` -> `exam` -> `protocol`
 
 # Level 1 
-category = ["Body", "Neuro"]
+category = ["Body", "Neuro", "Trauma"]
 
 # Level 2
 ## Map `exam_id` to `exam_name`
@@ -17,6 +17,7 @@ exam_id_name = {
         "ct_kub": "CT KUB",
         "cta_pe": "CTA for PE",
         "ct_chest": "CT Chest",
+        "ct_chest_wa": "CT Chest + Whole Abd",
         "cta_chest": "CTA Chest",
         "cta_aorta": "CTA Whole Aorta",
         "cta_runoff": "CTA runoff"
@@ -24,8 +25,11 @@ exam_id_name = {
     "Neuro": {
         "ct_brain_nc": "CT Brain (non-contrast)",
         "ct_brain_with_cm": "CT Brain with Contrast",
-        "cta_ctv_brain": "CTA/CTV Brain",
-        "ct_neuro_trauma": "CT Neuro Trauma"
+        "cta_ctv_brain": "CTA/CTV Brain"
+    },
+    "Trauma": {
+        "ct_neuro_trauma": "CT Neuro Trauma",
+        "ct_body_trauma": "CT Body Trauma"
     }
 }
 
@@ -77,6 +81,9 @@ exam_id_protocol_id = {
         "ct_chest_eso",
         "ct_chest_svc"
     ],
+    "ct_chest_wa": [
+        "ct_chest_wa_full"
+    ],
     "cta_chest": [
         "cta_chest_hemoptysis",
         "cta_chest_trauma"
@@ -102,7 +109,16 @@ exam_id_protocol_id = {
         "ctv_brain_vst"
     },
     "ct_neuro_trauma": {
-        "cta_neck_trauma"
+        "cta_neck_trauma",
+        "ct_facial_trauma",
+        "ct_orbit_trauma"
+    },
+    "ct_body_trauma": {
+        "pan_scan",
+        "cta_blunt_abd",
+        "cta_penetrate_abd",
+        "ct_second_look_abd",
+        "cta_chest_trauma"
     }
 }
 
@@ -150,6 +166,8 @@ protocols_id_name = {
     "ct_chest_dysphagia": "Dysphagia",
     "ct_chest_eso": "CT esophagogram",
     "ct_chest_svc": "SVC Obstruction",
+    # CT Chest + WA
+    "ct_chest_wa_full": "CT Chest + Whole Abd",
 
     # CTA Chest
     "cta_chest_hemoptysis": "Hemoptysis",
@@ -169,7 +187,15 @@ protocols_id_name = {
     # CT Brain with CM
     "ct_brain_with_cm_routine": "CT Brain with Contrast",
     # CT Neuro Trauma
-    "cta_neck_trauma": "CT Neck Trauma"
+    "cta_neck_trauma": "CTA Neck (trauma)",
+    "ct_facial_trauma": "CT Facial Bone (trauma)",
+    "ct_orbit_trauma": "CT Orbit (trauma)",
+    # CT Body Trauma
+    "pan_scan": "Pan-Scan Whole body CT (trauma)",
+    "cta_blunt_abd": "CTA Blunt Abdomen (trauma)",
+    "cta_penetrate_abd": "CTA Penetrating Abd (trauma)",
+    "ct_second_look_abd": "CT Second look Abd (trauma)",
+    "cta_chest_trauma": "CTA Chest (trauma)"
 }
 
 
@@ -572,6 +598,24 @@ protocols = {
 """,
         "contrast_text": "IV contrast"
     },
+    # CT Chest + WA
+    "ct_chest_wa_full": {
+        "protocol_name": protocols_id_name["ct_chest_wa_full"],
+        "exam_name": exam_id_name["Body"]["ct_chest_wa"],
+        "phase_design_text": """
+- Plain (Chest + Whole abd)
+- Late A (Chest + Whole abd)
+- Venous (Whole abd)
+- Delay (liver)
+""",
+        "contrast_text": "Oral (?), Rectal (?)"
+    },
+    # "protocol_id": {
+    #     "protocol_name": protocols_id_name["protocol_id"],
+    #     "exam_name": exam_id_name["Body"]["xxx"],
+    #     "phase_design_text": """""",
+    #     "contrast_text": ""
+    # },
     # CTA Chest
     # Hemoptysis
     "cta_chest_hemoptysis": {
@@ -688,14 +732,88 @@ protocols = {
 """,
         "contrast_text": "IV contrast"
     },
+    # Trauma
+    ## CTA Neck (trauma)
     "cta_neck_trauma": {
         "protocol_name": protocols_id_name["cta_neck_trauma"],
-        "exam_name": exam_id_name["Neuro"]["ct_neuro_trauma"],
+        "exam_name": "CTA Neck",
         "phase_design_text": """
 - CTA (brain, neck) COW to arch
 - Post-contrast (brain)
 """,
         "contrast_text": "IV contrast"
+    },
+    ## CT facial bone (trauma)
+    "ct_facial_trauma": {
+        "protocol_name": protocols_id_name["ct_facial_trauma"],
+        "exam_name": "CT Facial Bone (non-contrast)",
+        "phase_design_text": """
+- CT Facial Bones (plain) with 3D reformats
+""",
+        "contrast_text": "No IV contrast"
+    },
+    ## CT Orbit (trauma)
+    "ct_orbit_trauma": {
+        "protocol_name": protocols_id_name["ct_orbit_trauma"],
+        "exam_name": "CT Orbit (non-contrast)",
+        "phase_design_text": None,
+        "contrast_text": "No IV contrast"
+    },
+    # CT Body Trauma
+    ## Pan-Scan
+    "pan_scan": {
+        "protocol_name": None,
+        "exam_name": protocols_id_name["pan_scan"],
+        "phase_design_text": """
+- Plain (Brain) [arms down]
+- Arterial (COW → pubic symphysis) [arms up]
+- Venous (Upper or Whole Abdomen)
+- +/- delay kidney, ureter
+- +/-  CT cystogram
+""",
+        "contrast_text": "IV contrast, No oral, No rectal"
+    },
+    ## CTA Blunt Abdomen (trauma)
+    "cta_blunt_abd": {
+        "protocol_name": protocols_id_name["cta_blunt_abd"],
+        "exam_name": exam_id_name["Body"]["cta_wa"],
+        "phase_design_text": """
+- CTA (whole)
+- Venous (whole)
+- may be Delay (in injury site)
+""",
+        "contrast_text": "IV contrast, No oral, No rectal"
+    },
+    ## CTA Penetrating Abd (trauma)
+    "cta_penetrate_abd": {
+        "protocol_name": protocols_id_name["cta_penetrate_abd"],
+        "exam_name": exam_id_name["Body"]["cta_wa"],
+        "phase_design_text": """
+- CTA (whole)
+- Venous (whole)
+- may be Delay (in injury site)
+*** วาง marker ตําแหน่งแผลด้วย
+""",
+        "contrast_text": "IV contrast, Oral & Rectal full positive (ถ้ามีเวลา)"
+    },
+    ## CT Second look Abd (trauma)
+    "ct_second_look_abd": {
+        "protocol_name": protocols_id_name["ct_second_look_abd"],
+        "exam_name": exam_id_name["Body"]["ct_wa"],
+        "phase_design_text": """
+- Venous (whole)
+""",
+        "contrast_text": "IV contrast, Oral (full positive), Rectal (positive)"
+    },
+    ## CT Second look Abd (trauma)
+    "cta_chest_trauma": {
+        "protocol_name": protocols_id_name["cta_chest_trauma"],
+        "exam_name": exam_id_name["Body"]["cta_chest"],
+        "phase_design_text": """
+- CTA (Chest)
+- Venous (Chest)
+""",
+        "contrast_text": "IV contrast, No Oral, No Rectal"
     },
     # "protocol_id": {
     #     "protocol_name": protocols_id_name["protocol_id"],
