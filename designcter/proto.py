@@ -167,7 +167,7 @@ protocols_id_name = {
     "ct_chest_eso": "CT esophagogram",
     "ct_chest_svc": "SVC Obstruction",
     # CT Chest + WA
-    "ct_chest_wa_full": "CT Chest + Whole Abd",
+    "ct_chest_wa_full": "Full CT Chest + WA",
 
     # CTA Chest
     "cta_chest_hemoptysis": "Hemoptysis",
@@ -600,7 +600,7 @@ protocols = {
     },
     # CT Chest + WA
     "ct_chest_wa_full": {
-        "protocol_name": protocols_id_name["ct_chest_wa_full"],
+        "protocol_name": None,
         "exam_name": exam_id_name["Body"]["ct_chest_wa"],
         "phase_design_text": """
 - Plain (Chest + Whole abd)
