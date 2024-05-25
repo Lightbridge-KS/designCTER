@@ -3,7 +3,7 @@
 ## My Mac
 
 ```zsh
-flet build macos --build-version "0.0.1" --product DesignCTER
+flet build macos --build-version "0.1.0" --product DesignCTER
 ```
 
 ## Build Number
