@@ -1,7 +1,7 @@
 import datetime
 from ._designTemp import design_template
 from .proto import protocols
-from ._utils import bool_yesno
+from ._utils import bool_yesno, newlineFormatOS
 
 
 
@@ -46,5 +46,7 @@ def design_ct(protocol_id: str,
         ref_phy_name_text = ref_phy_name,
         ref_phy_tel_text = ref_phy_tel
     )
+    # Format newline for macOS or Windows
+    str_design_fmt = newlineFormatOS(str_design)
     
-    return str_design
+    return str_design_fmt

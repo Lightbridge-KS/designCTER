@@ -191,8 +191,8 @@ def main(page: ft.Page):
     # Page Size
     page.window_min_width = 780
     page.window_width = 780
-    page.window_min_height = 790
-    page.window_height = 790
+    page.window_min_height = 800
+    page.window_height = 800
     # App Bar
     page.appbar = ft.CupertinoAppBar(
         leading=ft.Icon(ft.icons.PALETTE),
