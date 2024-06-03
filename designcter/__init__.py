@@ -1,4 +1,4 @@
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 # Export User-facing function:
 
 from .proto import protocols
