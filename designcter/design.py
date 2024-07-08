@@ -1,7 +1,7 @@
 import datetime
 from ._designTemp import design_template
 from .proto import protocols
-from ._utils import bool_yesno, newlineFormatOS
+from ._utils import bool_yesno, bool_yesdash, newlineFormatOS
 
 
 
@@ -38,9 +38,9 @@ def design_ct(protocol_id: str,
         eGFR_value_text = eGFR_value,
         renal_premed_text = renal_premed,
         allergy_premed_text = allergy_premed,
-        pregnancy_text = bool_yesno(pregnancy),
-        ETT_text = bool_yesno(ETT),
-        C1_text = bool_yesno(C1),
+        pregnancy_text = bool_yesdash(pregnancy),
+        ETT_text = bool_yesdash(ETT),
+        C1_text = bool_yesdash(C1),
         precaution_text = precaution,
         special_inst_text = special_inst,
         ref_phy_name_text = ref_phy_name,
