@@ -604,7 +604,7 @@ protocols = {
         "exam_name": exam_id_name["Body"]["ct_chest_wa"],
         "phase_design_text": """
 - Plain (Chest + Whole abd)
-- Late A (Chest + Whole abd)
+- Late A (Chest + Upper abd)
 - Venous (Whole abd)
 - Delay (liver)
 """,
