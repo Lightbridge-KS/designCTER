@@ -216,7 +216,7 @@ def main(page: ft.Page):
     # Output Text Field
     txt_size = 14 # 14
     output_text_field = ft.TextField(value="\n"*txt_size, multiline=True, read_only=False, text_size=txt_size,
-                                     min_lines=txt_size+12, max_lines=txt_size+1) 
+                                     min_lines=txt_size+12) 
     
     # UI
     rr = ResponsiveRow(
