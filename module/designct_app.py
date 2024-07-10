@@ -117,7 +117,7 @@ class InputDesign(ft.UserControl):
                   input_NPO_time: {self.input_NPO_time.value}
               """)
 
-class DesignCTApp(ft.UserControl):
+class AppDesignCT(ft.UserControl):
     def __init__(self):
         super().__init__()
         self.input_design = InputDesign()
