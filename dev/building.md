@@ -3,7 +3,7 @@
 ## My Mac
 
 ```zsh
-flet build macos --build-version "0.1.2" --product DesignCTER --copyright "Copyright (c) 2024 Lightbridge-KS."
+flet build macos --build-version "0.1.2.5" --product DesignCTER --copyright "Copyright (c) 2024 Lightbridge-KS."
 ```
 
 ## Build Number
