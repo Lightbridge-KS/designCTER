@@ -123,7 +123,7 @@ class DesignCTApp(ft.UserControl):
         self.input_design = InputDesign()
         self.txt_size = 14
         self.output_text_field = ft.TextField(value="\n"*self.txt_size, multiline=True, read_only=False, text_size=self.txt_size, min_lines=self.txt_size+12)
-        self.btn_gen = ft.ElevatedButton(text="Generate", on_click=self.button_gen_clicked)
+        self.btn_gen = ft.ElevatedButton(text="    Generate    ", on_click=self.button_gen_clicked)
         self.btn_reset = ft.ElevatedButton(text="Reset", on_click=self.button_reset_clicked)
         self.btn_copy = ft.IconButton(icon=ft.icons.CONTENT_COPY, icon_size=20, tooltip="Copy output", on_click=self.button_cp_clicked)
 
@@ -154,9 +154,12 @@ class DesignCTApp(ft.UserControl):
             controls=[
                 Column(col={"sm": 6}, controls=[
                     self.input_design,
-                    Row([Column([Row([self.btn_gen, self.btn_copy])]), Column([self.btn_reset])], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),
+                    
                 ], alignment=ft.MainAxisAlignment.START),
-                Column(col={"sm": 6}, controls=[self.output_text_field], alignment=ft.MainAxisAlignment.START)
+                Column(col={"sm": 6}, 
+                       controls=[self.output_text_field,
+                                 Row([Column([Row([self.btn_gen, self.btn_copy])]), Column([self.btn_reset])], alignment=ft.MainAxisAlignment.SPACE_BETWEEN),], 
+                       alignment=ft.MainAxisAlignment.START)
             ]
         )
         lv = ft.ListView(controls=[rr], expand=1, spacing=5, padding=10, auto_scroll=False)
