@@ -3,7 +3,7 @@ import pyperclip
 import datetime
 from flet import Container, Column, Row, ResponsiveRow, Page
 
-from designct_app import DesignCTApp
+from module.designct_app import DesignCTApp
 from designcter._utils import dash_if_blank
 
 
@@ -18,8 +18,8 @@ def main(page: ft.Page):
     page.title = "Design CTER Protocol"
     page.window_min_width = 780
     page.window_width = 780
-    page.window_min_height = 850
-    page.window_height = 850
+    page.window_min_height = 840
+    page.window_height = 840
     page.appbar = ft.CupertinoAppBar(
         leading=ft.Icon(ft.icons.PALETTE),
         bgcolor=ft.colors.SURFACE_VARIANT,
