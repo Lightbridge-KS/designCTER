@@ -3,8 +3,7 @@ import pyperclip
 import datetime
 from flet import Container, Column, Row, ResponsiveRow, Page
 
-from module.designct_app import AppDesignCT
-from module.spine_ht_loss_app import AppSpineHtLoss
+from module import AppDesignCT, AppSpineHtLoss, AppMean
 from designcter._utils import dash_if_blank
 
 
@@ -38,12 +37,20 @@ def main(page: ft.Page):
     )
     
     tab_1 = AppDesignCT()
-    tab_2 = AppSpineHtLoss() #ft.Text("Tab 2",size=30,visible=False)
+    tab_2 = ft.Column(controls=[AppMean(), AppSpineHtLoss()]) 
+    #ft.Text("Tab 2",size=30,visible=False)
     
     page.add(tab_1, tab_2)
 
 def toggle_theme(page: ft.Page):
-    page.theme_mode = ft.ThemeMode.DARK if page.theme_mode == ft.ThemeMode.LIGHT else ft.ThemeMode.LIGHT
+    if page.theme_mode == ft.ThemeMode.LIGHT:
+        page.theme_mode = ft.ThemeMode.DARK
+        page.appbar.trailing = ft.IconButton(icon=ft.icons.DARK_MODE_OUTLINED, tooltip="Toggle theme", on_click=lambda e: toggle_theme(page))
+        
+    else:
+        page.theme_mode = ft.ThemeMode.LIGHT
+        page.appbar.trailing = ft.IconButton(icon=ft.icons.BRIGHTNESS_5, tooltip="Toggle theme", on_click=lambda e: toggle_theme(page))
+    # page.theme_mode = ft.ThemeMode.DARK if page.theme_mode == ft.ThemeMode.LIGHT else ft.ThemeMode.LIGHT
     page.update()
 
 if __name__ == "__main__":

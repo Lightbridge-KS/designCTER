@@ -1,3 +1,5 @@
+import re
+
 def attempt_float(x: str):
     try:
         return float(x)
@@ -7,7 +9,28 @@ def attempt_float(x: str):
         else:
             raise ValueError(f"x = `{x}` must be a string of number")
         
-def parse_str_to_num_or_list(x: str, sep = ","):
+
+def parse_str_to_num_or_list(x: str):
+    if not isinstance(x, str):
+        raise ValueError("`x` must be a string")
+
+    try:
+        # Split the string into parts based on comma or one or more spaces
+        res = [float(num.strip()) for num in re.split(r'[,\s]+', x.strip()) if num]
+        
+        if len(res) == 1:  # Ex: [1.1] will convert to 1.1
+            return res[0]
+        if len(res) > 1:  # Ex: [1.1, 1.2, 1.3, 1.45]
+            return res
+    except ValueError:
+        if x.strip() == "":
+            return None
+        else:
+            raise ValueError(f"x = `{x}` must be a string of number(s) separated by space or comma")
+
+
+
+def parse_str_to_num_or_list2(x: str, sep = ","):
     if not isinstance(x, str):
         raise ValueError("`x` must be string")
     
