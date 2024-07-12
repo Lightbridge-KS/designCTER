@@ -38,6 +38,8 @@ def main(page: ft.Page):
     
     tab_1 = AppDesignCT()
     tab_2 = ft.Column(controls=[AppMean(), AppSpineHtLoss()]) 
+    ## Default
+    tab_1.visible = True; tab_2.visible = False
     #ft.Text("Tab 2",size=30,visible=False)
     
     page.add(tab_1, tab_2)
