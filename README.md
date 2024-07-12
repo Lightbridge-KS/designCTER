@@ -3,9 +3,7 @@
 
 > **Cross-platform application for design CT protocol in emergency department for my institution.**
 
-Light            |  Dark
-:-------------------------:|:-------------------------:
-![](./img/screen-light.png)  |  ![](./img/screen-dark.png) 
+
 
 ---
 
@@ -18,6 +16,42 @@ Light            |  Dark
 - **Desktop app:** see [release](https://github.com/Lightbridge-KS/designCTER/releases)
 
 ---
+
+## Mode
+
+### Design CT Protocol
+
+Light            |  Dark
+:-------------------------:|:-------------------------:
+![](./img/screen-light-1.png)  |  ![](./img/screen-dark-1.png) 
+
+
+### Calculator
+
+Light            |  Dark
+:-------------------------:|:-------------------------:
+![](./img/screen-light-2.png)  |  ![](./img/screen-dark-2.png) 
+
+**Mean calculator:** 
+
+![Mean Calculator](./img/mean-calc.png)
+
+- Calculate mean value from input numbers (separated by blank space or comma)
+
+**Prostate volume:** 
+
+![Prostate volume](./img/prostate-vol.png)
+
+- **Input:** Perpendicular diameter (cm) of prostate in 3 planes
+- **Output:** A report for prostate volume with severity (normal, prominent, or enlarged size), using ellipsoid formula.
+
+**Spine Height Loss:**
+
+![Spine height loss](./img/spine-ht-loss.png)
+
+- **Input:** Normal and collapsed height of spine. If there is no normal reference of the spine (e.g. severe collapse), the height of the two adjacent vertebrae can be used by input two numbers in the "Collapsed height (cm)" textbox (separated by blank space or comma).
+- **Output:** A report for percentage of vertebral compression fracture with grading (mild, moderate, severe) using [Genant's classification](https://radiopaedia.org/articles/44227). 
+
 
 ## Build from Source
 
