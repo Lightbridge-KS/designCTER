@@ -3,7 +3,7 @@ import pyperclip
 import datetime
 from flet import Container, Column, Row, ResponsiveRow, Page
 
-from module import AppDesignCT, AppSpineHtLoss, AppMean
+from module import AppDesignCT, AppSpineHtLoss, AppMean, AppVol
 from designcter._utils import dash_if_blank
 
 
@@ -37,7 +37,7 @@ def main(page: ft.Page):
     )
     
     tab_1 = AppDesignCT()
-    tab_2 = ft.Column(controls=[AppMean(), AppSpineHtLoss()]) 
+    tab_2 = ft.Column(controls=[AppMean(), AppVol(), AppSpineHtLoss()]) 
     ## Default
     tab_1.visible = True; tab_2.visible = False
     #ft.Text("Tab 2",size=30,visible=False)
