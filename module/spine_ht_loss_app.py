@@ -12,11 +12,11 @@ class AppSpineHtLoss(ft.UserControl):
         super().__init__()
         ## Normal Height (cm)
         self.input_ht_normal = ft.TextField(
-            label="Normal height (cm)", hint_text="Normal height in cm"
+            label="Normal height (cm)", hint_text="Normal height in cm", on_submit=self.button_gen_clicked
         )
         ## Collapsed Height (cm)
         self.input_ht_bad = ft.TextField(
-            label="Collapsed height (cm)", hint_text="Collapsed height in cm"
+            label="Collapsed height (cm)", hint_text="Collapsed height in cm", on_submit=self.button_gen_clicked
         )
         # Button
         self.btn = ft.ElevatedButton(text="Generate", on_click=self.button_gen_clicked)
@@ -39,6 +39,7 @@ class AppSpineHtLoss(ft.UserControl):
                         self.input_ht_bad,
                         # Manual
                         ft.Text(Manual.spine_ht_loss_app, theme_style = ft.TextThemeStyle.BODY_SMALL, color=ft.colors.GREY),
+                        ft.Text(Manual.spine_ht_loss_app_ref, theme_style = ft.TextThemeStyle.BODY_SMALL, color=ft.colors.GREY),
                         # ft.Markdown(Manual.spine_ht_loss_app, selectable=True)
                     ], alignment=ft.MainAxisAlignment.START),
                 Column(col={"sm": 6},

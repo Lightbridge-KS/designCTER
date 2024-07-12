@@ -12,7 +12,7 @@ class AppVol(ft.UserControl):
         
         ## Input Diameters
         self.input_numbers_text = ft.TextField(
-            label="Diameters in 3 planes (cm)", hint_text="e.g. 4.4 4.5 4.6"
+            label="Diameters in 3 planes (cm)", hint_text="e.g. 4.4 4.5 4.6", on_submit=self.button_gen_clicked
         )
         
         # Button
@@ -32,7 +32,8 @@ class AppVol(ft.UserControl):
                         self.input_numbers_text,
                         # Manual
                         ft.Text(Manual.vol_app, theme_style = ft.TextThemeStyle.BODY_SMALL, color=ft.colors.GREY),
-                        # ft.Markdown(Manual.mean_app, selectable=True)
+                        ft.Text(Manual.vol_app_ref, theme_style = ft.TextThemeStyle.BODY_SMALL, color=ft.colors.GREY),
+                        # ft.Markdown(Manual.vol_app, selectable=True)
                     ], alignment=ft.MainAxisAlignment.START),
                 Column(col={"sm": 6},
                        controls = [

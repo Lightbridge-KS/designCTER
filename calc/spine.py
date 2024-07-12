@@ -15,7 +15,8 @@ def spine_ht_loss(normal_cm: float | List[Union[float, int]], bad_cm: float | Li
     loss_pc = ( (normal_cm - bad_cm) / normal_cm) * 100
     dx = _spine_ht_loss_dx(loss_pc)
 
-    out = f"""Height loss: {round(loss_pc, 1)} % ({dx})"""
+    # out = f"""Height loss: {round(loss_pc, 1)}% ({dx})"""
+    out = f"""{dx} compression fracture ({round(loss_pc, 1)}% height loss)."""
     return out
         
     
@@ -26,17 +27,17 @@ def _spine_ht_loss_dx(loss_pc: float | int):
         raise ValueError("`bad_cm` must less than `normal_cm`")
     
     if loss_pc < 20:
-        dx = "less than mild"
+        dx = "Less than mild"
     elif loss_pc < 25:
-        dx = "mild"
+        dx = "Mild"
     elif loss_pc == 25:
-        dx = "mild to moderate"
+        dx = "Mild to moderate"
     elif loss_pc < 40:
-        dx = "moderate"
+        dx = "Moderate"
     elif loss_pc == 40:
-        dx = "moderate to severe"
+        dx = "Moderate to severe"
     elif loss_pc > 40:
-        dx = "severe"
+        dx = "Severe"
 
     return dx
 

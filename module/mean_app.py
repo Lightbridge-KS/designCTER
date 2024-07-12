@@ -12,7 +12,7 @@ class AppMean(ft.UserControl):
         
         ## Input Text of numbers
         self.input_numbers_text = ft.TextField(
-            label="Numbers to calculate", hint_text="e.g. 1.1 1.2"
+            label="Numbers to calculate", hint_text="e.g. 1.1 1.2", on_submit=self.button_gen_clicked
         )
         
         # Button
