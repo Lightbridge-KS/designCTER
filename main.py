@@ -1,10 +1,7 @@
 import flet as ft
-import pyperclip
-import datetime
 from flet import Container, Column, Row, ResponsiveRow, Page
 
 from module import AppDesignCT, AppSpineHtLoss, AppMean, AppVol
-from designcter._utils import dash_if_blank
 
 
 def main(page: ft.Page):
