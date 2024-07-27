@@ -19,18 +19,22 @@
 
 ## Mode
 
-### Design CT Protocol
+### Tab 1: Design CT Protocol
 
 Light            |  Dark
 :-------------------------:|:-------------------------:
 ![](./img/screen-light-1.png)  |  ![](./img/screen-dark-1.png) 
 
+This mode will generate CT protocols available from 3 levels dropdown: "category", "exam", and "protocol". Other information can be filled in the input text field. Once finished, user can press **Generate**, then the protocol will render accordingly in the output text field. 
 
-### Calculator
+
+### Tab 2: Calculator
 
 Light            |  Dark
 :-------------------------:|:-------------------------:
 ![](./img/screen-light-2.png)  |  ![](./img/screen-dark-2.png) 
+
+This helper mode can be use as a calculator for writing radiology report which includes  build-in calculator for common task, such as mean calculator (for calculate dose), prostate volume, and spine height loss.
 
 **Mean calculator:** 
 
