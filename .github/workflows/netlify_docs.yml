@@ -14,13 +14,13 @@ jobs:
         - name: Set up Quarto
           uses: quarto-dev/quarto-actions/setup@v2
 
-        # - name: Change to docs directory
-        #   run: cd docs
+        - name: Change to docs directory
+          run: cd docs
 
         - name: Render and Publish 
           uses: quarto-dev/quarto-actions/publish@v2
           with:
             target: netlify
-            path: docs/_out
+            path: docs
             render: false
             NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
