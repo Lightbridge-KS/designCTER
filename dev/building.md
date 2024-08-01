@@ -1,5 +1,12 @@
 # Building
 
+## Publish Documentation
+
+```zsh
+cd docs
+quarto publish netlify
+```
+
 ## My Mac
 
 ```zsh
