@@ -1,4 +1,4 @@
-name: Build and Deploy to Netlify
+name: Build and Deploy App to Netlify
 on:
   push:
   pull_request:

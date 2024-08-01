@@ -1,0 +1,3 @@
+/.quarto/
+_out/*
+!_out/*.docx

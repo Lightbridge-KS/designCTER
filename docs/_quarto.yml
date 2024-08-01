@@ -1,0 +1,10 @@
+project:
+  title: "docs"
+  output-dir: "_out"
+
+format: 
+  html: default
+  docx: default
+
+freeze: true
+
