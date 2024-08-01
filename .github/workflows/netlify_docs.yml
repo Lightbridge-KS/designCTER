@@ -23,6 +23,6 @@ jobs:
           uses: quarto-dev/quarto-actions/publish@v2
           with:
             target: netlify
-            path: docs
+            path: docs/_out
             render: false
             NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
