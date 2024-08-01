@@ -1,6 +1,9 @@
 name: Build and Deploy App to Netlify
 on:
   push:
+    branches: main
+    paths-ignore:
+      - 'docs/**'
   pull_request:
 jobs:
   build:
