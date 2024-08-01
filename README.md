@@ -15,6 +15,8 @@
 
 - **Desktop app:** see [release](https://github.com/Lightbridge-KS/designCTER/releases)
 
+- **User Guide:** <https://design-cter-userguide.netlify.app>
+
 ---
 
 ## Mode
