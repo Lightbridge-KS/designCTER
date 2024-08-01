@@ -1,0 +1,250 @@
+,protocol_name,exam_name,phase_design_text,contrast_text
+0,Routine WA,CTWA,"
+- Venous (whole)
+- Delay (liver)
+","Oral (limited water), Rectal (water)"
+1,,CTWA,"
+- Plain (whole)
+- Late A (upper)
+- Venous (whole)
+- Delay (liver)
+","Oral (?), Rectal (?)"
+2,Solid Organ Rupture,CTWA,"
+- Plain (whole)
+- Late A (upper)
+- Venous (whole)
+- Delay (upper)
+","No oral, No rectal"
+3,Free Air,CTWA,"
+- Plain
+- Venous (may be)
+","Oral (positive), Rectal (positive) [If not stable -> no oral, no rectal]"
+4,GI Perforation,CTWA,"
+- Venous
+- Delay (liver)
+","Oral (limited positive), Rectal (positive)"
+5,Gut Obstruction,CTWA,"
+- Venous (whole)
+- Delay 3 min (liver)
+","No oral, No rectal"
+6,HBP mass/abscess (CTWA),CTWA,"
+- Plain (upper)
+- Late A (upper)
+- Venous (whole)
+- Delay (upper)
+","Oral (limited water), No rectal"
+7,Kidney mass/abscess,CTWA,"
+- Plain (KUB)
+- Late A (upper)
+- Venous (100 sec)
+- Delay (KUB)
+","Oral (limited water), No rectal"
+8,GI Mass,CTWA,"
+- Venous (whole)
+- Delay (liver)
+","Oral (full positive), Rectal (water)"
+9,Diverticulitis,CTWA,"
+- Venous (whole)
+- Delay (liver)
+","Oral (limited water), Rectal (1 L, positive CM)"
+10,Pancreatitis,CTWA,"
+- Plain (upper)
+- Late A (upper)
+- Venous (whole)
+- Delay (upper)
+","Oral (limited water), No rectal"
+11,Intra-abdominal infection,CTWA,"
+- Plain (whole)
+- Late A (upper)
+- Venous (whole)
+- Delay (upper)
+","Oral (limited water), Rectal (water)"
+12,Leak-Fistula-Collection,CTWA,"
+- Venous (whole)
+- Delay (liver)
+","Oral (if Hx bowel resect -> full positive; If not -> limited positive), Rectal (positive) ?"
+13,Routine Upper Abd,CT Upper Abd,"
+- Venous (upper)
+- Delay (upper)
+","Oral (limited water), No rectal"
+14,HBP mass/abscess (Upper),CT Upper Abd,"
+- Plain (upper)
+- Late A (upper)
+- Venous (upper)
+- Delay (upper)
+","Oral (limited water), No rectal"
+15,Biliary Stone,CT Upper Abd,"
+- Plain (upper)
+- Late A (upper)
+- Venous (upper)
+- Delay (liver)
+","Oral (limited water), No rectal"
+16,Adrenal mass/abscess,CT Upper Abd,"
+- Plain (upper)
+- Late A (upper)
+- Venous (upper)
+- Delay 3 min (upper)
+*** Check ภาพ +/- Delay 15 min (adrenal)
+","Oral (limited water), No rectal"
+17,Appendicitis,CT Lower Abd,"
+- Venous 120 sec (L3 to pubic symphysis)
+","Rectal (Positive 1 L สวนถึง cecum), No oral"
+18,,CT KUB (non-contrast),"
+- Plain KUB (kidneys to pubic symphysis)
+*** Check ภาพก่อนเลิก
+","No Oral, No Rectal"
+19,KUB Stone,CT KUB (non-contrast),"
+- Plain KUB (kidneys to pubic symphysis)
+*** Check ภาพก่อนเลิก
+","No Oral, No Rectal"
+20,Hematuria,CT KUB,"
+- Plain (KUB)
+- Late A (Kidney)
+- Venous (KUB)
+- Delay (KUB)
+*** Check ภาพก่อนเลิก
+","Oral (limited water), No Rectal"
+21,Kidney mass/Abscess,CT KUB,"
+*** If suspect renal mass → consider CTWA for staging
+- Plain (KUB)
+- Late A (Upper)
+- Venous (100 sec)
+- Delay (KUB)
+*** Check ภาพก่อนเลิก
+","Oral (limited water), No Rectal"
+22,GI Bleed,CTA Whole Abd,"
+- Plain (whole)
+- CTA (whole)
+- Venous (whole)
+- Delay (whole)
+","No oral, No rectal"
+23,Mesenteric Ischemia,CTA Whole Abd,"
+- Plain (whole)
+- CTA (whole)
+- Venous (whole)
+- Delay (whole)
+","Oral (limited water), Rectal (water)"
+24,AAA Rupture,CTA Whole Abd,"
+- Plain (whole)
+- CTA (maybe ถ้ามีเวลา คนไข้ stable)
+- Venous (maybe ถ้ามีเวลา คนไข้ stable)
+","No oral, No rectal"
+25,CTA for PE (ไม่ลากขา),CTA for PE,"
+- CTPA (chest)
+- Venous (chest)
+",IV contrast
+26,CTA for PE with DVT,CTA for PE,"
+- CTPA (chest)
+- Venous (chest, legs)
+",IV contrast
+27,Routine CT Chest,CT Chest,"
+- **maybe** plain (chest)
+- Late A (chest)
+",IV contrast
+28,,CT Chest (non-contrast),"
+- plain (chest)
+",No IV contrast
+29,Nodule/mass characterization,CT Chest,"
+- Plain (chest)
+- Late A (chest)
+",IV contrast
+30,Tracheobronchomalacia,CT Chest,"
+- Plain (chest, dynamic expiration)
+",No IV contrast
+31,Dysphagia,CT Chest,"
+- Plain (chest)
+- Venous (chest)
+","IV contrast, Oral (limited water)"
+32,CT esophagogram,CT Chest,"
+- Plain (Chest, reduced dose) ก่อนกิน CM
+- จากนั้น กิน CM 1 cup (250 ml) ที่เตียง
+- Venous (Chest) หลังกิน CM
+",Oral (Positive CM)
+33,SVC Obstruction,CT Chest,"
+- Plain (Chest, reduced dose)
+- Late A (Chest)
+- Immediate delay (Chest)
+",IV contrast
+34,,CT Chest + Whole Abd,"
+- Plain (Chest + Whole abd)
+- Late A (Chest + Upper abd)
+- Venous (Whole abd)
+- Delay (liver)
+","Oral (?), Rectal (?)"
+35,Hemoptysis,CTA Chest,"
+- Plain (Chest)
+- CTA (Apex to L2) → Systemic arterial phase
+- Immediate delay (Chest)
+* Note: L2 (Celiac Axis) ให้เห็น renal artery origin
+",IV contrast
+36,CTA Chest (trauma),CTA Chest,"
+- CTA (Chest)
+- Venous (Chest)
+","IV contrast, No Oral, No Rectal"
+37,Aorta first time,CTA Whole Aorta,"
+- Plain (whole aorta)
+- CTA (whole aorta)
+- Immediate delay (whole aorta)
+",IV contrast
+38,Aortic Dissection,CTA Whole Aorta,"
+- Plain (whole aorta)
+- CTA (whole aorta)
+- Immediate delay (whole aorta)
+",IV contrast
+39,AAA Post-op,CTA Whole Aorta,"
+- Plain (whole aorta)
+- CTA (whole aorta)
+- Immediate delay (whole aorta)
+",IV contrast
+40,CTA Runoff,CTA runoff,"
+ขา → Aortic bifurcation to feet
+แขน → mid-heart to hands
+- Plain
+- CTA
+- Immediate delay
+",IV contrast
+41,CTA Runoff (< 60 yr),CTA runoff,"
+ขา → Aortic bifurcation to feet
+แขน → mid-heart to hands
+- CTA
+- Immediate delay
+",IV contrast
+42,,CT Brain (non-contrast),,No IV contrast
+43,Intracranial aneurysm,CTA Brain,"
+- Plain, CTA, post-contrast (Brain)
+",IV contrast
+44,Venous Sinus Thrombosis,CTV Brain,"
+- Plain, CTV, post-contrast (Brain)
+",IV contrast
+45,,CT Brain with Contrast,"
+- Plain, post-contrast (Brain)
+",IV contrast
+46,CTA Neck (trauma),CTA Neck,"
+- CTA (brain, neck) COW to arch
+- Post-contrast (brain)
+",IV contrast
+47,CT Facial Bone (trauma),CT Facial Bone (non-contrast),"
+- CT Facial Bones (plain) with 3D reformats
+",No IV contrast
+48,CT Orbit (trauma),CT Orbit (non-contrast),,No IV contrast
+49,,Pan-Scan Whole body CT (trauma),"
+- Plain (Brain) [arms down]
+- Arterial (COW → pubic symphysis) [arms up]
+- Venous (Upper or Whole Abdomen)
+- +/- delay kidney, ureter
+- +/-  CT cystogram
+","IV contrast, No oral, No rectal"
+50,CTA Blunt Abdomen (trauma),CTA Whole Abd,"
+- CTA (whole)
+- Venous (whole)
+- may be Delay (in injury site)
+","IV contrast, No oral, No rectal"
+51,CTA Penetrating Abd (trauma),CTA Whole Abd,"
+- CTA (whole)
+- Venous (whole)
+- may be Delay (in injury site)
+*** วาง marker ตําแหน่งแผลด้วย
+","IV contrast, Oral & Rectal full positive (ถ้ามีเวลา)"
+52,CT Second look Abd (trauma),CTWA,"
+- Venous (whole)
+","IV contrast, Oral (full positive), Rectal (positive)"

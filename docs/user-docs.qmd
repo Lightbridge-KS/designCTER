@@ -1,0 +1,241 @@
+---
+title: "DesignCTER (User Guide)"
+---
+
+```{r setup, include=FALSE}
+here::i_am("docs/user-docs.qmd")
+library(here)
+library(tidyverse)
+library(gt)
+library(reticulate)
+
+source_python(here("designcter/proto.py"))
+```
+
+
+```{r protocols_df_raw, include=FALSE}
+protocols_df_raw <- read_csv(here("docs/data/protocols.csv"))
+```
+
+```{r protocols_df, include=FALSE}
+protocols_df <- protocols_df_raw |> 
+  select(exam_name, protocol_name, phase_design_text, contrast_text)
+```
+
+```{r filter, include=FALSE}
+protocols_df_body <- protocols_df |> filter(exam_name %in% flatten_chr(exam_id_name$Body))
+
+protocols_df_neuro <- protocols_df |> filter(exam_name %in% c(flatten_chr(exam_id_name$Neuro), "CTA Brain", "CTV Brain"))
+
+protocols_df_trauma <- protocols_df |> filter(
+  protocol_name %in% c(protocols_id_name$cta_neck_trauma, 
+                   protocols_id_name$ct_facial_trauma,
+                   protocols_id_name$ct_orbit_trauma,
+                   protocols_id_name$pan_scan,
+                   protocols_id_name$cta_blunt_abd,
+                   protocols_id_name$cta_penetrate_abd,
+                   protocols_id_name$cta_chest_trauma,
+                   protocols_id_name$ct_second_look_abd)
+  )
+```
+
+```{r include=FALSE}
+exam_id_protocol_id$ct_body_trauma
+```
+
+
+```{r gt_custom, include=FALSE}
+# Custom display table
+gt_custom <- function(df) {
+  df |>
+    gt() |>
+    sub_missing(missing_text = "---") |> 
+    cols_label(
+      protocol_name = "Protocol", phase_design_text = "Phase Design",
+      contrast_text = "Contrast"
+    ) |>
+    fmt_markdown(columns = everything()) |>
+    tab_style(
+      style = cell_text(weight = "bold"),
+      locations = cells_row_groups()
+    ) |>
+    tab_style(
+      style = cell_text(weight = "bold"),
+      locations = cells_column_labels()
+    ) 
+    
+}
+```
+
+```{r gt_custom_body, include=FALSE}
+# gt_custom_body <- function(df){
+#   gt_custom(df) |> 
+#     opt_stylize(style = 6, color = "cyan")
+# }
+```
+
+---
+
+**App Link:** <https://design-cter.netlify.app>
+
+**GitHub Repo:** <https://github.com/Lightbridge-KS/designCTER>
+
+---
+
+## Body CT
+
+### CTWA
+
+```{r protocols_df_body_ctwa_tbl, echo=FALSE}
+protocols_df_body_ctwa_tbl <- protocols_df_body |> 
+  filter(exam_name == "CTWA") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "cyan")
+  
+
+protocols_df_body_ctwa_tbl
+```
+
+### CTA Whole Abdomen
+
+```{r protocols_df_body_cta_wa_tbl, echo=FALSE}
+protocols_df_body_cta_wa_tbl <- protocols_df_body |> 
+  filter(exam_name == "CTA Whole Abd") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "red")
+
+protocols_df_body_cta_wa_tbl
+```
+
+### CT Upper Abdomen
+
+```{r protocols_df_body_ctupperabd_tbl, echo=FALSE}
+protocols_df_body_ctupperabd_tbl <- protocols_df_body |> 
+  filter(exam_name == "CT Upper Abd") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "cyan")
+
+protocols_df_body_ctupperabd_tbl
+```
+
+### CT Lower Abdomen
+
+```{r protocols_df_body_ctlowerabd_tbl, echo=FALSE}
+protocols_df_body_ctlowerabd_tbl <- protocols_df_body |> 
+  filter(exam_name == "CT Lower Abd") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "green")
+
+protocols_df_body_ctlowerabd_tbl
+```
+
+### CT KUB
+
+
+```{r protocols_df_body_ctkub_tbl, echo=FALSE}
+protocols_df_body_ctkub_tbl <- protocols_df_body |> 
+  filter(exam_name == "CT KUB") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "blue")
+
+protocols_df_body_ctkub_tbl
+```
+
+### CTA for PE
+
+```{r protocols_df_body_ctape_tbl, echo=FALSE}
+protocols_df_body_ctape_tbl <- protocols_df_body |> 
+  filter(exam_name == "CTA for PE") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "red")
+
+protocols_df_body_ctape_tbl
+```
+
+
+### CT Chest
+
+```{r protocols_df_body_ctchest_tbl, echo=FALSE}
+protocols_df_body_ctchest_tbl <- protocols_df_body |> 
+  filter(exam_name == "CT Chest") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "gray")
+
+protocols_df_body_ctchest_tbl
+```
+
+
+### CT Chest + WA
+
+```{r protocols_df_body_ctchestwa_tbl, echo=FALSE}
+protocols_df_body_ctchestwa_tbl <- protocols_df_body |> 
+  filter(exam_name == "CT Chest + Whole Abd") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "gray")
+
+protocols_df_body_ctchestwa_tbl
+```
+
+
+### CTA Chest 
+
+```{r protocols_df_body_ctachest_tbl, echo=FALSE}
+protocols_df_body_ctachest_tbl <- protocols_df_body |> 
+  filter(exam_name == "CTA Chest") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "red")
+
+protocols_df_body_ctachest_tbl
+```
+
+### CTA Whole Aorta
+
+```{r protocols_df_body_ctawholeaorta_tbl, echo=FALSE}
+protocols_df_body_ctawholeaorta_tbl <- protocols_df_body |> 
+  filter(exam_name == "CTA Whole Aorta") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "red")
+
+protocols_df_body_ctawholeaorta_tbl
+```
+
+### CTA Runoff
+
+```{r protocols_df_body_ctarunoff_tbl, echo=FALSE}
+protocols_df_body_ctarunoff_tbl <- protocols_df_body |> 
+  filter(exam_name == "CTA runoff") |> select(!exam_name) |> 
+  gt_custom() |> 
+  opt_stylize(style = 3, color = "red")
+
+protocols_df_body_ctarunoff_tbl
+```
+
+
+## Neuro CT
+
+```{r protocols_df_neuro_tbl, echo=FALSE}
+protocols_df_neuro_tbl <- protocols_df_neuro |> 
+  gt_custom() |> 
+  cols_label(exam_name = "Exam") |> 
+  opt_stylize(style = 3, color = "cyan")
+
+protocols_df_neuro_tbl
+```
+
+## Trauma CT
+
+```{r protocols_df_trauma_tbl, echo=FALSE}
+protocols_df_trauma_tbl <- protocols_df_trauma |> 
+  gt_custom() |> 
+  cols_label(exam_name = "Exam") |> 
+  opt_stylize(style = 3, color = "red")
+
+protocols_df_trauma_tbl
+```
+
+
+
+
+
+
+
