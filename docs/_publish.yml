@@ -1,4 +1,4 @@
-- source: docs.qmd
+- source: user-docs.qmd
   netlify:
     - id: eb3bf39d-e7c3-464a-8eb4-f4f6ee60ceb6
       url: 'https://design-cter-userguide.netlify.app'
