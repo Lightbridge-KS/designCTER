@@ -1,0 +1,7152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>DesignCTER (User Guide)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="user-docs_files/libs/clipboard/clipboard.min.js"></script>
+<script src="user-docs_files/libs/quarto-html/quarto.js"></script>
+<script src="user-docs_files/libs/quarto-html/popper.min.js"></script>
+<script src="user-docs_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="user-docs_files/libs/quarto-html/anchor.min.js"></script>
+<link href="user-docs_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="user-docs_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="user-docs_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="user-docs_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="user-docs_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#body-ct" id="toc-body-ct" class="nav-link active" data-scroll-target="#body-ct">Body CT</a>
+  <ul class="collapse">
+  <li><a href="#ctwa" id="toc-ctwa" class="nav-link" data-scroll-target="#ctwa">CTWA</a></li>
+  <li><a href="#cta-whole-abdomen" id="toc-cta-whole-abdomen" class="nav-link" data-scroll-target="#cta-whole-abdomen">CTA Whole Abdomen</a></li>
+  <li><a href="#ct-upper-abdomen" id="toc-ct-upper-abdomen" class="nav-link" data-scroll-target="#ct-upper-abdomen">CT Upper Abdomen</a></li>
+  <li><a href="#ct-lower-abdomen" id="toc-ct-lower-abdomen" class="nav-link" data-scroll-target="#ct-lower-abdomen">CT Lower Abdomen</a></li>
+  <li><a href="#ct-kub" id="toc-ct-kub" class="nav-link" data-scroll-target="#ct-kub">CT KUB</a></li>
+  <li><a href="#cta-for-pe" id="toc-cta-for-pe" class="nav-link" data-scroll-target="#cta-for-pe">CTA for PE</a></li>
+  <li><a href="#ct-chest" id="toc-ct-chest" class="nav-link" data-scroll-target="#ct-chest">CT Chest</a></li>
+  <li><a href="#ct-chest-wa" id="toc-ct-chest-wa" class="nav-link" data-scroll-target="#ct-chest-wa">CT Chest + WA</a></li>
+  <li><a href="#cta-chest" id="toc-cta-chest" class="nav-link" data-scroll-target="#cta-chest">CTA Chest</a></li>
+  <li><a href="#cta-whole-aorta" id="toc-cta-whole-aorta" class="nav-link" data-scroll-target="#cta-whole-aorta">CTA Whole Aorta</a></li>
+  <li><a href="#cta-runoff" id="toc-cta-runoff" class="nav-link" data-scroll-target="#cta-runoff">CTA Runoff</a></li>
+  </ul></li>
+  <li><a href="#neuro-ct" id="toc-neuro-ct" class="nav-link" data-scroll-target="#neuro-ct">Neuro CT</a></li>
+  <li><a href="#trauma-ct" id="toc-trauma-ct" class="nav-link" data-scroll-target="#trauma-ct">Trauma CT</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="user-docs.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">DesignCTER (User Guide)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<hr>
+<p><strong>App Link:</strong> <a href="https://design-cter.netlify.app" class="uri">https://design-cter.netlify.app</a></p>
+<p><strong>GitHub Repo:</strong> <a href="https://github.com/Lightbridge-KS/designCTER" class="uri">https://github.com/Lightbridge-KS/designCTER</a></p>
+<hr>
+<section id="body-ct" class="level2">
+<h2 class="anchored" data-anchor-id="body-ct">Body CT</h2>
+<section id="ctwa" class="level3">
+<h3 class="anchored" data-anchor-id="ctwa">CTWA</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="blzkpfebjx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#blzkpfebjx table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#blzkpfebjx thead, #blzkpfebjx tbody, #blzkpfebjx tfoot, #blzkpfebjx tr, #blzkpfebjx td, #blzkpfebjx th {
+  border-style: none;
+}
+
+#blzkpfebjx p {
+  margin: 0;
+  padding: 0;
+}
+
+#blzkpfebjx .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#blzkpfebjx .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#blzkpfebjx .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#blzkpfebjx .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#blzkpfebjx .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#blzkpfebjx .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#blzkpfebjx .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#blzkpfebjx .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #016763;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#blzkpfebjx .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #016763;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#blzkpfebjx .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#blzkpfebjx .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#blzkpfebjx .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#blzkpfebjx .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#blzkpfebjx .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#blzkpfebjx .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#blzkpfebjx .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#blzkpfebjx .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#blzkpfebjx .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#blzkpfebjx .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blzkpfebjx .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#blzkpfebjx .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#blzkpfebjx .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#blzkpfebjx .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blzkpfebjx .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#blzkpfebjx .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#blzkpfebjx .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#blzkpfebjx .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blzkpfebjx .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#blzkpfebjx .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#blzkpfebjx .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#blzkpfebjx .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#blzkpfebjx .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#blzkpfebjx .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blzkpfebjx .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#blzkpfebjx .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#blzkpfebjx .gt_left {
+  text-align: left;
+}
+
+#blzkpfebjx .gt_center {
+  text-align: center;
+}
+
+#blzkpfebjx .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#blzkpfebjx .gt_font_normal {
+  font-weight: normal;
+}
+
+#blzkpfebjx .gt_font_bold {
+  font-weight: bold;
+}
+
+#blzkpfebjx .gt_font_italic {
+  font-style: italic;
+}
+
+#blzkpfebjx .gt_super {
+  font-size: 65%;
+}
+
+#blzkpfebjx .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#blzkpfebjx .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#blzkpfebjx .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#blzkpfebjx .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#blzkpfebjx .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#blzkpfebjx .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#blzkpfebjx .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#blzkpfebjx .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#blzkpfebjx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Routine WA</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Venous (whole)</li>
+<li>Delay (liver)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (limited water), Rectal (water)</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name">—</td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (whole)</li>
+<li>Late A (upper)</li>
+<li>Venous (whole)</li>
+<li>Delay (liver)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (?), Rectal (?)</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Solid Organ Rupture</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (whole)</li>
+<li>Late A (upper)</li>
+<li>Venous (whole)</li>
+<li>Delay (upper)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>No oral, No rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Free Air</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain</li>
+<li>Venous (may be)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (positive), Rectal (positive) [If not stable -&gt; no oral, no rectal]</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>GI Perforation</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Venous</li>
+<li>Delay (liver)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (limited positive), Rectal (positive)</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Gut Obstruction</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Venous (whole)</li>
+<li>Delay 3 min (liver)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>No oral, No rectal</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>HBP mass/abscess (CTWA)</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (upper)</li>
+<li>Late A (upper)</li>
+<li>Venous (whole)</li>
+<li>Delay (upper)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (limited water), No rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Kidney mass/abscess</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (KUB)</li>
+<li>Late A (upper)</li>
+<li>Venous (100 sec)</li>
+<li>Delay (KUB)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (limited water), No rectal</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>GI Mass</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Venous (whole)</li>
+<li>Delay (liver)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (full positive), Rectal (water)</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Diverticulitis</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Venous (whole)</li>
+<li>Delay (liver)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (limited water), Rectal (1 L, positive CM)</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Pancreatitis</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (upper)</li>
+<li>Late A (upper)</li>
+<li>Venous (whole)</li>
+<li>Delay (upper)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (limited water), No rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Intra-abdominal infection</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (whole)</li>
+<li>Late A (upper)</li>
+<li>Venous (whole)</li>
+<li>Delay (upper)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (limited water), Rectal (water)</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Leak-Fistula-Collection</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Venous (whole)</li>
+<li>Delay (liver)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (if Hx bowel resect -&gt; full positive; If not -&gt; limited positive), Rectal (positive) ?</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>CT Second look Abd (trauma)</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Venous (whole)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast, Oral (full positive), Rectal (positive)</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="cta-whole-abdomen" class="level3">
+<h3 class="anchored" data-anchor-id="cta-whole-abdomen">CTA Whole Abdomen</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="krnhjadvgd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#krnhjadvgd table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#krnhjadvgd thead, #krnhjadvgd tbody, #krnhjadvgd tfoot, #krnhjadvgd tr, #krnhjadvgd td, #krnhjadvgd th {
+  border-style: none;
+}
+
+#krnhjadvgd p {
+  margin: 0;
+  padding: 0;
+}
+
+#krnhjadvgd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#krnhjadvgd .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#krnhjadvgd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#krnhjadvgd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#krnhjadvgd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#krnhjadvgd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#krnhjadvgd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#krnhjadvgd .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#krnhjadvgd .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#krnhjadvgd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#krnhjadvgd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#krnhjadvgd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#krnhjadvgd .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#krnhjadvgd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#krnhjadvgd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#krnhjadvgd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#krnhjadvgd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#krnhjadvgd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#krnhjadvgd .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#krnhjadvgd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#krnhjadvgd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#krnhjadvgd .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#krnhjadvgd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#krnhjadvgd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#krnhjadvgd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#krnhjadvgd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#krnhjadvgd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#krnhjadvgd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#krnhjadvgd .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#krnhjadvgd .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#krnhjadvgd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#krnhjadvgd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#krnhjadvgd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#krnhjadvgd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#krnhjadvgd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#krnhjadvgd .gt_left {
+  text-align: left;
+}
+
+#krnhjadvgd .gt_center {
+  text-align: center;
+}
+
+#krnhjadvgd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#krnhjadvgd .gt_font_normal {
+  font-weight: normal;
+}
+
+#krnhjadvgd .gt_font_bold {
+  font-weight: bold;
+}
+
+#krnhjadvgd .gt_font_italic {
+  font-style: italic;
+}
+
+#krnhjadvgd .gt_super {
+  font-size: 65%;
+}
+
+#krnhjadvgd .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#krnhjadvgd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#krnhjadvgd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#krnhjadvgd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#krnhjadvgd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#krnhjadvgd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#krnhjadvgd .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#krnhjadvgd .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#krnhjadvgd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>GI Bleed</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (whole)</li>
+<li>CTA (whole)</li>
+<li>Venous (whole)</li>
+<li>Delay (whole)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>No oral, No rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Mesenteric Ischemia</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (whole)</li>
+<li>CTA (whole)</li>
+<li>Venous (whole)</li>
+<li>Delay (whole)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (limited water), Rectal (water)</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>AAA Rupture</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (whole)</li>
+<li>CTA (maybe ถ้ามีเวลา คนไข้ stable)</li>
+<li>Venous (maybe ถ้ามีเวลา คนไข้ stable)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>No oral, No rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>CTA Blunt Abdomen (trauma)</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>CTA (whole)</li>
+<li>Venous (whole)</li>
+<li>may be Delay (in injury site)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast, No oral, No rectal</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>CTA Penetrating Abd (trauma)</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>CTA (whole)</li>
+<li>Venous (whole)</li>
+<li>may be Delay (in injury site) *** วาง marker ตําแหน่งแผลด้วย</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast, Oral &amp; Rectal full positive (ถ้ามีเวลา)</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="ct-upper-abdomen" class="level3">
+<h3 class="anchored" data-anchor-id="ct-upper-abdomen">CT Upper Abdomen</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="qqycwshoae" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qqycwshoae table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#qqycwshoae thead, #qqycwshoae tbody, #qqycwshoae tfoot, #qqycwshoae tr, #qqycwshoae td, #qqycwshoae th {
+  border-style: none;
+}
+
+#qqycwshoae p {
+  margin: 0;
+  padding: 0;
+}
+
+#qqycwshoae .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#qqycwshoae .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#qqycwshoae .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#qqycwshoae .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#qqycwshoae .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qqycwshoae .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#qqycwshoae .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qqycwshoae .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #016763;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#qqycwshoae .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #016763;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#qqycwshoae .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#qqycwshoae .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#qqycwshoae .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#qqycwshoae .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#qqycwshoae .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#qqycwshoae .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#qqycwshoae .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#qqycwshoae .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#qqycwshoae .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#qqycwshoae .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qqycwshoae .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qqycwshoae .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#qqycwshoae .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#qqycwshoae .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qqycwshoae .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#qqycwshoae .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qqycwshoae .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#qqycwshoae .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qqycwshoae .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#qqycwshoae .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#qqycwshoae .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#qqycwshoae .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#qqycwshoae .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qqycwshoae .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qqycwshoae .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qqycwshoae .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qqycwshoae .gt_left {
+  text-align: left;
+}
+
+#qqycwshoae .gt_center {
+  text-align: center;
+}
+
+#qqycwshoae .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#qqycwshoae .gt_font_normal {
+  font-weight: normal;
+}
+
+#qqycwshoae .gt_font_bold {
+  font-weight: bold;
+}
+
+#qqycwshoae .gt_font_italic {
+  font-style: italic;
+}
+
+#qqycwshoae .gt_super {
+  font-size: 65%;
+}
+
+#qqycwshoae .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#qqycwshoae .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qqycwshoae .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qqycwshoae .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qqycwshoae .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qqycwshoae .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qqycwshoae .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#qqycwshoae .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#qqycwshoae div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Routine Upper Abd</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Venous (upper)</li>
+<li>Delay (upper)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (limited water), No rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>HBP mass/abscess (Upper)</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (upper)</li>
+<li>Late A (upper)</li>
+<li>Venous (upper)</li>
+<li>Delay (upper)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (limited water), No rectal</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Biliary Stone</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (upper)</li>
+<li>Late A (upper)</li>
+<li>Venous (upper)</li>
+<li>Delay (liver)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (limited water), No rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Adrenal mass/abscess</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (upper)</li>
+<li>Late A (upper)</li>
+<li>Venous (upper)</li>
+<li>Delay 3 min (upper) *** Check ภาพ +/- Delay 15 min (adrenal)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (limited water), No rectal</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="ct-lower-abdomen" class="level3">
+<h3 class="anchored" data-anchor-id="ct-lower-abdomen">CT Lower Abdomen</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="ppyiunlpia" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ppyiunlpia table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ppyiunlpia thead, #ppyiunlpia tbody, #ppyiunlpia tfoot, #ppyiunlpia tr, #ppyiunlpia td, #ppyiunlpia th {
+  border-style: none;
+}
+
+#ppyiunlpia p {
+  margin: 0;
+  padding: 0;
+}
+
+#ppyiunlpia .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ppyiunlpia .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ppyiunlpia .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ppyiunlpia .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ppyiunlpia .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ppyiunlpia .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#ppyiunlpia .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ppyiunlpia .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #027101;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ppyiunlpia .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #027101;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ppyiunlpia .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ppyiunlpia .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ppyiunlpia .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ppyiunlpia .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ppyiunlpia .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ppyiunlpia .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#ppyiunlpia .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ppyiunlpia .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ppyiunlpia .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ppyiunlpia .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ppyiunlpia .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ppyiunlpia .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ppyiunlpia .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ppyiunlpia .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ppyiunlpia .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#ppyiunlpia .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ppyiunlpia .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#ppyiunlpia .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ppyiunlpia .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#ppyiunlpia .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#ppyiunlpia .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#ppyiunlpia .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#ppyiunlpia .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ppyiunlpia .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ppyiunlpia .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ppyiunlpia .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ppyiunlpia .gt_left {
+  text-align: left;
+}
+
+#ppyiunlpia .gt_center {
+  text-align: center;
+}
+
+#ppyiunlpia .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ppyiunlpia .gt_font_normal {
+  font-weight: normal;
+}
+
+#ppyiunlpia .gt_font_bold {
+  font-weight: bold;
+}
+
+#ppyiunlpia .gt_font_italic {
+  font-style: italic;
+}
+
+#ppyiunlpia .gt_super {
+  font-size: 65%;
+}
+
+#ppyiunlpia .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ppyiunlpia .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ppyiunlpia .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ppyiunlpia .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ppyiunlpia .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ppyiunlpia .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ppyiunlpia .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ppyiunlpia .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ppyiunlpia div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Appendicitis</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Venous 120 sec (L3 to pubic symphysis)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Rectal (Positive 1 L สวนถึง cecum), No oral</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="ct-kub" class="level3">
+<h3 class="anchored" data-anchor-id="ct-kub">CT KUB</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tmuhtxntfj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tmuhtxntfj table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#tmuhtxntfj thead, #tmuhtxntfj tbody, #tmuhtxntfj tfoot, #tmuhtxntfj tr, #tmuhtxntfj td, #tmuhtxntfj th {
+  border-style: none;
+}
+
+#tmuhtxntfj p {
+  margin: 0;
+  padding: 0;
+}
+
+#tmuhtxntfj .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#tmuhtxntfj .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#tmuhtxntfj .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#tmuhtxntfj .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#tmuhtxntfj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tmuhtxntfj .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#tmuhtxntfj .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#tmuhtxntfj .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #004D80;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#tmuhtxntfj .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #004D80;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#tmuhtxntfj .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#tmuhtxntfj .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#tmuhtxntfj .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#tmuhtxntfj .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#tmuhtxntfj .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#tmuhtxntfj .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#tmuhtxntfj .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#tmuhtxntfj .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#tmuhtxntfj .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#tmuhtxntfj .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tmuhtxntfj .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#tmuhtxntfj .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#tmuhtxntfj .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#tmuhtxntfj .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tmuhtxntfj .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#tmuhtxntfj .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#tmuhtxntfj .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#tmuhtxntfj .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tmuhtxntfj .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#tmuhtxntfj .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#tmuhtxntfj .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#tmuhtxntfj .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#tmuhtxntfj .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tmuhtxntfj .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tmuhtxntfj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#tmuhtxntfj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#tmuhtxntfj .gt_left {
+  text-align: left;
+}
+
+#tmuhtxntfj .gt_center {
+  text-align: center;
+}
+
+#tmuhtxntfj .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#tmuhtxntfj .gt_font_normal {
+  font-weight: normal;
+}
+
+#tmuhtxntfj .gt_font_bold {
+  font-weight: bold;
+}
+
+#tmuhtxntfj .gt_font_italic {
+  font-style: italic;
+}
+
+#tmuhtxntfj .gt_super {
+  font-size: 65%;
+}
+
+#tmuhtxntfj .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#tmuhtxntfj .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#tmuhtxntfj .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#tmuhtxntfj .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#tmuhtxntfj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#tmuhtxntfj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#tmuhtxntfj .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#tmuhtxntfj .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#tmuhtxntfj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Hematuria</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (KUB)</li>
+<li>Late A (Kidney)</li>
+<li>Venous (KUB)</li>
+<li>Delay (KUB) *** Check ภาพก่อนเลิก</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (limited water), No Rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Kidney mass/Abscess</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><p>*** If suspect renal mass → consider CTWA for staging - Plain (KUB) - Late A (Upper) - Venous (100 sec) - Delay (KUB) *** Check ภาพก่อนเลิก</p></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>Oral (limited water), No Rectal</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="cta-for-pe" class="level3">
+<h3 class="anchored" data-anchor-id="cta-for-pe">CTA for PE</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="dijplkanma" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dijplkanma table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dijplkanma thead, #dijplkanma tbody, #dijplkanma tfoot, #dijplkanma tr, #dijplkanma td, #dijplkanma th {
+  border-style: none;
+}
+
+#dijplkanma p {
+  margin: 0;
+  padding: 0;
+}
+
+#dijplkanma .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dijplkanma .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dijplkanma .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dijplkanma .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dijplkanma .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dijplkanma .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dijplkanma .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dijplkanma .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dijplkanma .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dijplkanma .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dijplkanma .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dijplkanma .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dijplkanma .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dijplkanma .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dijplkanma .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#dijplkanma .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dijplkanma .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dijplkanma .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dijplkanma .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dijplkanma .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dijplkanma .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dijplkanma .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dijplkanma .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dijplkanma .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#dijplkanma .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dijplkanma .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dijplkanma .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dijplkanma .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#dijplkanma .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#dijplkanma .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#dijplkanma .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dijplkanma .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dijplkanma .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dijplkanma .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dijplkanma .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dijplkanma .gt_left {
+  text-align: left;
+}
+
+#dijplkanma .gt_center {
+  text-align: center;
+}
+
+#dijplkanma .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dijplkanma .gt_font_normal {
+  font-weight: normal;
+}
+
+#dijplkanma .gt_font_bold {
+  font-weight: bold;
+}
+
+#dijplkanma .gt_font_italic {
+  font-style: italic;
+}
+
+#dijplkanma .gt_super {
+  font-size: 65%;
+}
+
+#dijplkanma .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dijplkanma .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dijplkanma .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dijplkanma .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dijplkanma .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dijplkanma .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dijplkanma .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#dijplkanma .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#dijplkanma div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>CTA for PE (ไม่ลากขา)</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>CTPA (chest)</li>
+<li>Venous (chest)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>CTA for PE with DVT</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>CTPA (chest)</li>
+<li>Venous (chest, legs)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="ct-chest" class="level3">
+<h3 class="anchored" data-anchor-id="ct-chest">CT Chest</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="wirzjaphjj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wirzjaphjj table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wirzjaphjj thead, #wirzjaphjj tbody, #wirzjaphjj tfoot, #wirzjaphjj tr, #wirzjaphjj td, #wirzjaphjj th {
+  border-style: none;
+}
+
+#wirzjaphjj p {
+  margin: 0;
+  padding: 0;
+}
+
+#wirzjaphjj .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wirzjaphjj .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wirzjaphjj .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wirzjaphjj .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wirzjaphjj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wirzjaphjj .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#wirzjaphjj .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wirzjaphjj .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wirzjaphjj .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wirzjaphjj .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wirzjaphjj .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wirzjaphjj .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wirzjaphjj .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wirzjaphjj .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wirzjaphjj .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#wirzjaphjj .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wirzjaphjj .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wirzjaphjj .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wirzjaphjj .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wirzjaphjj .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wirzjaphjj .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wirzjaphjj .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wirzjaphjj .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wirzjaphjj .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#wirzjaphjj .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wirzjaphjj .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#wirzjaphjj .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wirzjaphjj .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#wirzjaphjj .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#wirzjaphjj .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#wirzjaphjj .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#wirzjaphjj .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wirzjaphjj .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wirzjaphjj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wirzjaphjj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wirzjaphjj .gt_left {
+  text-align: left;
+}
+
+#wirzjaphjj .gt_center {
+  text-align: center;
+}
+
+#wirzjaphjj .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wirzjaphjj .gt_font_normal {
+  font-weight: normal;
+}
+
+#wirzjaphjj .gt_font_bold {
+  font-weight: bold;
+}
+
+#wirzjaphjj .gt_font_italic {
+  font-style: italic;
+}
+
+#wirzjaphjj .gt_super {
+  font-size: 65%;
+}
+
+#wirzjaphjj .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wirzjaphjj .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wirzjaphjj .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wirzjaphjj .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wirzjaphjj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wirzjaphjj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wirzjaphjj .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#wirzjaphjj .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#wirzjaphjj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Routine CT Chest</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li><strong>maybe</strong> plain (chest)</li>
+<li>Late A (chest)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Nodule/mass characterization</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (chest)</li>
+<li>Late A (chest)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Tracheobronchomalacia</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (chest, dynamic expiration)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>No IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Dysphagia</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (chest)</li>
+<li>Venous (chest)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast, Oral (limited water)</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>CT esophagogram</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (Chest, reduced dose) ก่อนกิน CM</li>
+<li>จากนั้น กิน CM 1 cup (250 ml) ที่เตียง</li>
+<li>Venous (Chest) หลังกิน CM</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (Positive CM)</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>SVC Obstruction</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (Chest, reduced dose)</li>
+<li>Late A (Chest)</li>
+<li>Immediate delay (Chest)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="ct-chest-wa" class="level3">
+<h3 class="anchored" data-anchor-id="ct-chest-wa">CT Chest + WA</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="dhxavkybne" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dhxavkybne table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dhxavkybne thead, #dhxavkybne tbody, #dhxavkybne tfoot, #dhxavkybne tr, #dhxavkybne td, #dhxavkybne th {
+  border-style: none;
+}
+
+#dhxavkybne p {
+  margin: 0;
+  padding: 0;
+}
+
+#dhxavkybne .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dhxavkybne .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dhxavkybne .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dhxavkybne .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dhxavkybne .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dhxavkybne .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dhxavkybne .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dhxavkybne .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dhxavkybne .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #000000;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dhxavkybne .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dhxavkybne .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dhxavkybne .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dhxavkybne .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dhxavkybne .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dhxavkybne .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#dhxavkybne .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dhxavkybne .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dhxavkybne .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dhxavkybne .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhxavkybne .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dhxavkybne .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dhxavkybne .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dhxavkybne .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhxavkybne .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#dhxavkybne .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dhxavkybne .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dhxavkybne .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhxavkybne .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#dhxavkybne .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#dhxavkybne .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#dhxavkybne .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dhxavkybne .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dhxavkybne .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhxavkybne .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dhxavkybne .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dhxavkybne .gt_left {
+  text-align: left;
+}
+
+#dhxavkybne .gt_center {
+  text-align: center;
+}
+
+#dhxavkybne .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dhxavkybne .gt_font_normal {
+  font-weight: normal;
+}
+
+#dhxavkybne .gt_font_bold {
+  font-weight: bold;
+}
+
+#dhxavkybne .gt_font_italic {
+  font-style: italic;
+}
+
+#dhxavkybne .gt_super {
+  font-size: 65%;
+}
+
+#dhxavkybne .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dhxavkybne .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dhxavkybne .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dhxavkybne .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dhxavkybne .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dhxavkybne .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dhxavkybne .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#dhxavkybne .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#dhxavkybne div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name">—</td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (Chest + Whole abd)</li>
+<li>Late A (Chest + Upper abd)</li>
+<li>Venous (Whole abd)</li>
+<li>Delay (liver)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>Oral (?), Rectal (?)</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="cta-chest" class="level3">
+<h3 class="anchored" data-anchor-id="cta-chest">CTA Chest</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="pgwwcugjft" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pgwwcugjft table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#pgwwcugjft thead, #pgwwcugjft tbody, #pgwwcugjft tfoot, #pgwwcugjft tr, #pgwwcugjft td, #pgwwcugjft th {
+  border-style: none;
+}
+
+#pgwwcugjft p {
+  margin: 0;
+  padding: 0;
+}
+
+#pgwwcugjft .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pgwwcugjft .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pgwwcugjft .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pgwwcugjft .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pgwwcugjft .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pgwwcugjft .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#pgwwcugjft .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pgwwcugjft .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pgwwcugjft .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pgwwcugjft .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pgwwcugjft .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pgwwcugjft .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pgwwcugjft .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#pgwwcugjft .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#pgwwcugjft .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#pgwwcugjft .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pgwwcugjft .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pgwwcugjft .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pgwwcugjft .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pgwwcugjft .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pgwwcugjft .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#pgwwcugjft .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#pgwwcugjft .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pgwwcugjft .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#pgwwcugjft .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pgwwcugjft .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#pgwwcugjft .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pgwwcugjft .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#pgwwcugjft .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#pgwwcugjft .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#pgwwcugjft .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#pgwwcugjft .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pgwwcugjft .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pgwwcugjft .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pgwwcugjft .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pgwwcugjft .gt_left {
+  text-align: left;
+}
+
+#pgwwcugjft .gt_center {
+  text-align: center;
+}
+
+#pgwwcugjft .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pgwwcugjft .gt_font_normal {
+  font-weight: normal;
+}
+
+#pgwwcugjft .gt_font_bold {
+  font-weight: bold;
+}
+
+#pgwwcugjft .gt_font_italic {
+  font-style: italic;
+}
+
+#pgwwcugjft .gt_super {
+  font-size: 65%;
+}
+
+#pgwwcugjft .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#pgwwcugjft .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pgwwcugjft .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pgwwcugjft .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pgwwcugjft .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pgwwcugjft .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pgwwcugjft .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#pgwwcugjft .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#pgwwcugjft div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Hemoptysis</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (Chest)</li>
+<li>CTA (Apex to L2) → Systemic arterial phase</li>
+<li>Immediate delay (Chest)</li>
+<li>Note: L2 (Celiac Axis) ให้เห็น renal artery origin</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>CTA Chest (trauma)</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>CTA (Chest)</li>
+<li>Venous (Chest)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast, No Oral, No Rectal</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="cta-whole-aorta" class="level3">
+<h3 class="anchored" data-anchor-id="cta-whole-aorta">CTA Whole Aorta</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fiwnpbxezh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fiwnpbxezh table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#fiwnpbxezh thead, #fiwnpbxezh tbody, #fiwnpbxezh tfoot, #fiwnpbxezh tr, #fiwnpbxezh td, #fiwnpbxezh th {
+  border-style: none;
+}
+
+#fiwnpbxezh p {
+  margin: 0;
+  padding: 0;
+}
+
+#fiwnpbxezh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fiwnpbxezh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#fiwnpbxezh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fiwnpbxezh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fiwnpbxezh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fiwnpbxezh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#fiwnpbxezh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fiwnpbxezh .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fiwnpbxezh .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fiwnpbxezh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fiwnpbxezh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fiwnpbxezh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fiwnpbxezh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#fiwnpbxezh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#fiwnpbxezh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#fiwnpbxezh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fiwnpbxezh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fiwnpbxezh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fiwnpbxezh .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fiwnpbxezh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#fiwnpbxezh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#fiwnpbxezh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#fiwnpbxezh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fiwnpbxezh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#fiwnpbxezh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#fiwnpbxezh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#fiwnpbxezh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fiwnpbxezh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#fiwnpbxezh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#fiwnpbxezh .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#fiwnpbxezh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#fiwnpbxezh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fiwnpbxezh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fiwnpbxezh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fiwnpbxezh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fiwnpbxezh .gt_left {
+  text-align: left;
+}
+
+#fiwnpbxezh .gt_center {
+  text-align: center;
+}
+
+#fiwnpbxezh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fiwnpbxezh .gt_font_normal {
+  font-weight: normal;
+}
+
+#fiwnpbxezh .gt_font_bold {
+  font-weight: bold;
+}
+
+#fiwnpbxezh .gt_font_italic {
+  font-style: italic;
+}
+
+#fiwnpbxezh .gt_super {
+  font-size: 65%;
+}
+
+#fiwnpbxezh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#fiwnpbxezh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#fiwnpbxezh .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#fiwnpbxezh .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#fiwnpbxezh .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#fiwnpbxezh .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#fiwnpbxezh .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#fiwnpbxezh .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#fiwnpbxezh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>Aorta first time</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (whole aorta)</li>
+<li>CTA (whole aorta)</li>
+<li>Immediate delay (whole aorta)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Aortic Dissection</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain (whole aorta)</li>
+<li>CTA (whole aorta)</li>
+<li>Immediate delay (whole aorta)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>AAA Post-op</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain (whole aorta)</li>
+<li>CTA (whole aorta)</li>
+<li>Immediate delay (whole aorta)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="cta-runoff" class="level3">
+<h3 class="anchored" data-anchor-id="cta-runoff">CTA Runoff</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="pwjmczzuvw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pwjmczzuvw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#pwjmczzuvw thead, #pwjmczzuvw tbody, #pwjmczzuvw tfoot, #pwjmczzuvw tr, #pwjmczzuvw td, #pwjmczzuvw th {
+  border-style: none;
+}
+
+#pwjmczzuvw p {
+  margin: 0;
+  padding: 0;
+}
+
+#pwjmczzuvw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pwjmczzuvw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#pwjmczzuvw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pwjmczzuvw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pwjmczzuvw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pwjmczzuvw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#pwjmczzuvw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pwjmczzuvw .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pwjmczzuvw .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pwjmczzuvw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pwjmczzuvw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pwjmczzuvw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pwjmczzuvw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#pwjmczzuvw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#pwjmczzuvw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#pwjmczzuvw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#pwjmczzuvw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#pwjmczzuvw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pwjmczzuvw .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pwjmczzuvw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#pwjmczzuvw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#pwjmczzuvw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#pwjmczzuvw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pwjmczzuvw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#pwjmczzuvw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#pwjmczzuvw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#pwjmczzuvw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pwjmczzuvw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#pwjmczzuvw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#pwjmczzuvw .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#pwjmczzuvw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#pwjmczzuvw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pwjmczzuvw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pwjmczzuvw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pwjmczzuvw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pwjmczzuvw .gt_left {
+  text-align: left;
+}
+
+#pwjmczzuvw .gt_center {
+  text-align: center;
+}
+
+#pwjmczzuvw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pwjmczzuvw .gt_font_normal {
+  font-weight: normal;
+}
+
+#pwjmczzuvw .gt_font_bold {
+  font-weight: bold;
+}
+
+#pwjmczzuvw .gt_font_italic {
+  font-style: italic;
+}
+
+#pwjmczzuvw .gt_super {
+  font-size: 65%;
+}
+
+#pwjmczzuvw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#pwjmczzuvw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#pwjmczzuvw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#pwjmczzuvw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#pwjmczzuvw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#pwjmczzuvw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#pwjmczzuvw .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#pwjmczzuvw .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#pwjmczzuvw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="protocol_name"><p>CTA Runoff</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><p>ขา → Aortic bifurcation to feet แขน → mid-heart to hands - Plain - CTA - Immediate delay</p></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>CTA Runoff (&lt; 60 yr)</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><p>ขา → Aortic bifurcation to feet แขน → mid-heart to hands - CTA - Immediate delay</p></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="neuro-ct" class="level2">
+<h2 class="anchored" data-anchor-id="neuro-ct">Neuro CT</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="dsxsibtxyz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dsxsibtxyz table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dsxsibtxyz thead, #dsxsibtxyz tbody, #dsxsibtxyz tfoot, #dsxsibtxyz tr, #dsxsibtxyz td, #dsxsibtxyz th {
+  border-style: none;
+}
+
+#dsxsibtxyz p {
+  margin: 0;
+  padding: 0;
+}
+
+#dsxsibtxyz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dsxsibtxyz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dsxsibtxyz .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dsxsibtxyz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dsxsibtxyz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dsxsibtxyz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dsxsibtxyz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dsxsibtxyz .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #016763;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dsxsibtxyz .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #016763;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dsxsibtxyz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dsxsibtxyz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dsxsibtxyz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dsxsibtxyz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dsxsibtxyz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dsxsibtxyz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#dsxsibtxyz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dsxsibtxyz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dsxsibtxyz .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dsxsibtxyz .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsxsibtxyz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dsxsibtxyz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dsxsibtxyz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dsxsibtxyz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsxsibtxyz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#dsxsibtxyz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dsxsibtxyz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dsxsibtxyz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsxsibtxyz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#dsxsibtxyz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#dsxsibtxyz .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#dsxsibtxyz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#dsxsibtxyz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dsxsibtxyz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsxsibtxyz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dsxsibtxyz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsxsibtxyz .gt_left {
+  text-align: left;
+}
+
+#dsxsibtxyz .gt_center {
+  text-align: center;
+}
+
+#dsxsibtxyz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dsxsibtxyz .gt_font_normal {
+  font-weight: normal;
+}
+
+#dsxsibtxyz .gt_font_bold {
+  font-weight: bold;
+}
+
+#dsxsibtxyz .gt_font_italic {
+  font-style: italic;
+}
+
+#dsxsibtxyz .gt_super {
+  font-size: 65%;
+}
+
+#dsxsibtxyz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dsxsibtxyz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dsxsibtxyz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dsxsibtxyz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dsxsibtxyz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dsxsibtxyz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dsxsibtxyz .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#dsxsibtxyz .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#dsxsibtxyz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Exam" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Exam</th>
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="exam_name"><p>CT Brain (non-contrast)</p></td>
+<td class="gt_row gt_left" headers="protocol_name">—</td>
+<td class="gt_row gt_left" headers="phase_design_text">—</td>
+<td class="gt_row gt_left" headers="contrast_text"><p>No IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="exam_name"><p>CTA Brain</p></td>
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>Intracranial aneurysm</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain, CTA, post-contrast (Brain)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="exam_name"><p>CTV Brain</p></td>
+<td class="gt_row gt_left" headers="protocol_name"><p>Venous Sinus Thrombosis</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Plain, CTV, post-contrast (Brain)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="exam_name"><p>CT Brain with Contrast</p></td>
+<td class="gt_row gt_left gt_striped" headers="protocol_name">—</td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>Plain, post-contrast (Brain)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="trauma-ct" class="level2">
+<h2 class="anchored" data-anchor-id="trauma-ct">Trauma CT</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="ygbygdndam" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ygbygdndam table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ygbygdndam thead, #ygbygdndam tbody, #ygbygdndam tfoot, #ygbygdndam tr, #ygbygdndam td, #ygbygdndam th {
+  border-style: none;
+}
+
+#ygbygdndam p {
+  margin: 0;
+  padding: 0;
+}
+
+#ygbygdndam .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ygbygdndam .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ygbygdndam .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ygbygdndam .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ygbygdndam .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ygbygdndam .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#ygbygdndam .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ygbygdndam .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ygbygdndam .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #A81600;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ygbygdndam .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ygbygdndam .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ygbygdndam .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ygbygdndam .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ygbygdndam .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ygbygdndam .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+  vertical-align: middle;
+}
+
+#ygbygdndam .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ygbygdndam .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ygbygdndam .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: dashed;
+  border-top-width: 1px;
+  border-top-color: #929292;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #929292;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #929292;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ygbygdndam .gt_stub {
+  color: #333333;
+  background-color: #D5D5D5;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ygbygdndam .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ygbygdndam .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ygbygdndam .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ygbygdndam .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ygbygdndam .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #929292;
+}
+
+#ygbygdndam .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ygbygdndam .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#ygbygdndam .gt_grand_summary_row {
+  color: #333333;
+  background-color: #D5D5D5;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ygbygdndam .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #929292;
+}
+
+#ygbygdndam .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #929292;
+}
+
+#ygbygdndam .gt_striped {
+  background-color: #F4F4F4;
+}
+
+#ygbygdndam .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #929292;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #929292;
+}
+
+#ygbygdndam .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ygbygdndam .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ygbygdndam .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ygbygdndam .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ygbygdndam .gt_left {
+  text-align: left;
+}
+
+#ygbygdndam .gt_center {
+  text-align: center;
+}
+
+#ygbygdndam .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ygbygdndam .gt_font_normal {
+  font-weight: normal;
+}
+
+#ygbygdndam .gt_font_bold {
+  font-weight: bold;
+}
+
+#ygbygdndam .gt_font_italic {
+  font-style: italic;
+}
+
+#ygbygdndam .gt_super {
+  font-size: 65%;
+}
+
+#ygbygdndam .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ygbygdndam .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ygbygdndam .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ygbygdndam .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ygbygdndam .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ygbygdndam .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ygbygdndam .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ygbygdndam .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ygbygdndam div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="Exam" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Exam</th>
+<th id="Protocol" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Protocol</th>
+<th id="Phase Design" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Phase Design</th>
+<th id="Contrast" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" style="font-weight: bold" scope="col">Contrast</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="exam_name"><p>CTA Chest</p></td>
+<td class="gt_row gt_left" headers="protocol_name"><p>CTA Chest (trauma)</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>CTA (Chest)</li>
+<li>Venous (Chest)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast, No Oral, No Rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="exam_name"><p>CTA Neck</p></td>
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>CTA Neck (trauma)</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>CTA (brain, neck) COW to arch</li>
+<li>Post-contrast (brain)</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="exam_name"><p>CT Facial Bone (non-contrast)</p></td>
+<td class="gt_row gt_left" headers="protocol_name"><p>CT Facial Bone (trauma)</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>CT Facial Bones (plain) with 3D reformats</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>No IV contrast</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="exam_name"><p>CT Orbit (non-contrast)</p></td>
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>CT Orbit (trauma)</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text">—</td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>No IV contrast</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="exam_name"><p>CTA Whole Abd</p></td>
+<td class="gt_row gt_left" headers="protocol_name"><p>CTA Blunt Abdomen (trauma)</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>CTA (whole)</li>
+<li>Venous (whole)</li>
+<li>may be Delay (in injury site)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast, No oral, No rectal</p></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="exam_name"><p>CTA Whole Abd</p></td>
+<td class="gt_row gt_left gt_striped" headers="protocol_name"><p>CTA Penetrating Abd (trauma)</p></td>
+<td class="gt_row gt_left gt_striped" headers="phase_design_text"><ul>
+<li>CTA (whole)</li>
+<li>Venous (whole)</li>
+<li>may be Delay (in injury site) *** วาง marker ตําแหน่งแผลด้วย</li>
+</ul></td>
+<td class="gt_row gt_left gt_striped" headers="contrast_text"><p>IV contrast, Oral &amp; Rectal full positive (ถ้ามีเวลา)</p></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="exam_name"><p>CTWA</p></td>
+<td class="gt_row gt_left" headers="protocol_name"><p>CT Second look Abd (trauma)</p></td>
+<td class="gt_row gt_left" headers="phase_design_text"><ul>
+<li>Venous (whole)</li>
+</ul></td>
+<td class="gt_row gt_left" headers="contrast_text"><p>IV contrast, Oral (full positive), Rectal (positive)</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
