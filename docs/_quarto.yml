@@ -1,17 +1,28 @@
 project:
-  title: "docs"
-  render:
-  - "user-docs.qmd"
-  output-dir: "_out"
+  type: book
+
+book:
+  title: "DesignCTER"
+  subtitle: "A User Guide"
+  author: "Kittpos Sirivongrungson"
+  repo-url: https://github.com/Lightbridge-KS/designCTER
+  sidebar: 
+    background: "#F5F5F5"
+    logo: "img/DesignCTER-2.5.png"
+    search: true
+  downloads: [docx]
+  date: today
+  chapters:
+    - index.md
+    - protocols-docs.qmd
 
 format: 
   html: 
     toc: true
     toc-depth: 3
-    theme: lux
+    theme: simplex # lux
   docx:
-    toc: true
-    toc-depth: 3
+    reference-doc: "assets/proprosal-ref.docx"
 
 freeze: auto
 

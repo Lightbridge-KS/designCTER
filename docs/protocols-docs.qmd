@@ -1,9 +1,9 @@
 ---
-title: "DesignCTER (User Guide)"
+title: "Protocols"
 ---
 
 ```{r setup, include=FALSE}
-here::i_am("docs/user-docs.qmd")
+here::i_am("docs/protocols-docs.qmd")
 library(here)
 library(tidyverse)
 library(gt)
@@ -74,13 +74,7 @@ gt_custom <- function(df) {
 # }
 ```
 
----
-
-**App Link:** <https://design-cter.netlify.app>
-
-**GitHub Repo:** <https://github.com/Lightbridge-KS/designCTER>
-
----
+Here are the protocols used in this application. 
 
 ## Body CT
 
@@ -232,7 +226,6 @@ protocols_df_trauma_tbl <- protocols_df_trauma |>
 
 protocols_df_trauma_tbl
 ```
-
 
 
 
