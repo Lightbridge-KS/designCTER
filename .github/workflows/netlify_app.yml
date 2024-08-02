@@ -4,7 +4,6 @@ on:
     branches: main
     paths-ignore:
       - 'docs/**'
-      - '.github/workflows/netlify_docs.yml' 
   pull_request:
 jobs:
   build:
