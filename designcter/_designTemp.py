@@ -12,5 +12,6 @@ Precaution: {precaution_text}
 Special instructions: {special_inst_text}
 Ref physician name: {ref_phy_name_text}
 Ref physician tel: {ref_phy_tel_text}
-"""
+""", 
+    "mri_gen": """{exam_name}{protocol_name_line}{phase_design_line}"""
 }

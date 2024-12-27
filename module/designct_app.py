@@ -129,7 +129,7 @@ class AppDesignCT(ft.UserControl):
 
     def get_text_output(self):
         input_dict = self.input_design.get()
-        text_output = designcter.design_ct(**input_dict)
+        text_output = designcter.Design(**input_dict)
         return text_output
 
     def button_reset_clicked(self, e):
