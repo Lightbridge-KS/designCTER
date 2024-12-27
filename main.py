@@ -13,10 +13,14 @@ def main(page: ft.Page):
         page.update()
     
     page.title = "Design CTER Protocol"
-    page.window_min_width = 780
-    page.window_width = 780
-    page.window_min_height = 840
-    page.window_height = 840
+    page.window.min_width = 780
+    # page.window_min_width = 780
+    page.window.width = 780
+    # page.window_width = 780
+    page.window.min_height = 840
+    # page.window_min_height = 840
+    page.window.height = 840
+    # page.window_height = 840
     page.appbar = ft.CupertinoAppBar(
         leading=ft.Icon(ft.icons.PALETTE),
         bgcolor=ft.colors.SURFACE_VARIANT,
@@ -28,8 +32,8 @@ def main(page: ft.Page):
         selected_index = 0,
         on_change= change_tab, # KEY
         destinations=[
-            ft.NavigationDestination(icon=ft.icons.BRUSH_ROUNDED, label="Design"),
-            ft.NavigationDestination(icon=ft.icons.CALCULATE_ROUNDED, label="Calculate"),
+            ft.NavigationBarDestination(icon=ft.icons.BRUSH_ROUNDED, label="Design"),
+            ft.NavigationBarDestination(icon=ft.icons.CALCULATE_ROUNDED, label="Calculate"),
         ]
     )
     
