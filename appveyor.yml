@@ -14,7 +14,7 @@ install:
 - pip install pyinstaller pillow
 
 build_script:
-- flet pack main.py --name DesignCTER --icon assets/icon.png --product-name DesignCTER --product-version "0.3.0-alpha" --copyright "Copyright (c) 2024 Lightbridge-KS."
+- flet pack main.py --name DesignCTER --icon assets/icon.png --product-name DesignCTER --product-version "0.3.0" --copyright "Copyright (c) 2024 Lightbridge-KS."
 
 test: off
 

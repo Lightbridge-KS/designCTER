@@ -10,7 +10,7 @@ quarto publish netlify
 ## My Mac
 
 ```zsh
-flet build macos --build-version "0.3.0-alpha.1" --product DesignCTER --copyright "Copyright (c) 2024 Lightbridge-KS."
+flet build macos --build-version "0.3.0" --product DesignCTER --copyright "Copyright (c) 2024 Lightbridge-KS."
 ```
 
 ## Build Number
