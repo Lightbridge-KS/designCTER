@@ -248,3 +248,14 @@
 52,CT Second look Abd (trauma),CTWA,"
 - Venous (whole)
 ","IV contrast, Oral (full positive), Rectal (positive)"
+53,,MRI Screening Whole Spine,"
+- Sagittal T2W FS
+- Axial T1W, T2W, GRE T2W at selected level
+
+If ส่ง neuro -> ไม่ฉีด Gd ทุกกรณี; If ส่ง MSK -> consult fellow
+
+Remark:
+* ถ้าไม่มี cord compression จะไม่ทำ axial view 
+* การวาง plane axial ให้ทำเฉพาะ level ที่สงสัย cord compression โดยวาง coverage ขึ้นข้างบน 2 levels และลงล่าง 2 levels (เช่น lesion T5 ให้วางตั้งแต่ T3-T7)
+* ถ้าสงสัย spinal cord infarct ให้ add sag DWI/ADC ด้วย
+",

@@ -16,7 +16,7 @@ def spine_ht_loss(normal_cm: float | List[Union[float, int]], bad_cm: float | Li
     dx = _spine_ht_loss_dx(loss_pc)
 
     # out = f"""Height loss: {round(loss_pc, 1)}% ({dx})"""
-    out = f"""{dx} compression fracture ({round(loss_pc, 1)}% height loss)."""
+    out = f"""{dx} compression fracture ({round(loss_pc)}% height loss)."""
     return out
         
     

@@ -1,13 +1,26 @@
 # Hierarchical structure Levels
 # `category` -> `exam` -> `protocol`
+from typing import TypedDict, Dict, List, Annotated
 
 # Level 1 
 category = ["Body", "Neuro", "Trauma"]
 
+
 # Level 2
 ## Map `exam_id` to `exam_name`
 ## The order of this dict appeared in drop down
-exam_id_name = {
+
+ExamIDToExamName = Annotated[Dict[str, str], "Maps exam_id to exam_name"]
+
+class ExamIDName(TypedDict):
+    """
+    A TypedDict representing the mapping of exam types to their corresponding exam ID to exam name mappings.
+    """
+    Body: ExamIDToExamName
+    Neuro: ExamIDToExamName
+    Trauma: ExamIDToExamName
+
+exam_id_name: ExamIDName = {
     "Body": {
         # exam_id: exam_name
         "ct_wa": "CTWA",
@@ -25,7 +38,8 @@ exam_id_name = {
     "Neuro": {
         "ct_brain_nc": "CT Brain (non-contrast)",
         "ct_brain_with_cm": "CT Brain with Contrast",
-        "cta_ctv_brain": "CTA/CTV Brain"
+        "cta_ctv_brain": "CTA/CTV Brain",
+        "mri_spine": "MRI Spine"
     },
     "Trauma": {
         "ct_neuro_trauma": "CT Neuro Trauma",
@@ -88,38 +102,41 @@ exam_id_protocol_id = {
         "cta_chest_hemoptysis",
         "cta_chest_trauma"
     ],
-    "cta_aorta": {
+    "cta_aorta": [
         "cta_aorta_first",
         "cta_aorta_dissect",
         "cta_aorta_aaa_postop"
-    },
-    "cta_runoff": {
+    ],
+    "cta_runoff": [
         "cta_runoff_old",
         "cta_runoff_young"
-    },
+    ],
     # Neuro
-    "ct_brain_nc": {
+    "ct_brain_nc": [
         "ct_brain_nc_routine"
-    },
-    "ct_brain_with_cm": {
+    ],
+    "ct_brain_with_cm": [
         "ct_brain_with_cm_routine"
-    },
-    "cta_ctv_brain": {
+    ],
+    "cta_ctv_brain": [
         "cta_brain_aneurysm",
         "ctv_brain_vst"
-    },
-    "ct_neuro_trauma": {
+    ],
+    "ct_neuro_trauma": [
         "cta_neck_trauma",
         "ct_facial_trauma",
         "ct_orbit_trauma"
-    },
-    "ct_body_trauma": {
+    ],
+    "ct_body_trauma": [
         "pan_scan",
         "cta_blunt_abd",
         "cta_penetrate_abd",
         "ct_second_look_abd",
         "cta_chest_trauma"
-    }
+    ],
+    "mri_spine": [
+        "mri_screening_whole_spine"
+    ]
 }
 
 
@@ -195,7 +212,9 @@ protocols_id_name = {
     "cta_blunt_abd": "CTA Blunt Abdomen (trauma)",
     "cta_penetrate_abd": "CTA Penetrating Abd (trauma)",
     "ct_second_look_abd": "CT Second look Abd (trauma)",
-    "cta_chest_trauma": "CTA Chest (trauma)"
+    "cta_chest_trauma": "CTA Chest (trauma)",
+    # MRI Spine
+    "mri_screening_whole_spine": "MRI Screening Whole Spine"
 }
 
 
@@ -814,6 +833,22 @@ protocols = {
 - Venous (Chest)
 """,
         "contrast_text": "IV contrast, No Oral, No Rectal"
+    },
+    "mri_screening_whole_spine": {
+        "protocol_name": None,
+        "exam_name": protocols_id_name["mri_screening_whole_spine"],
+        "phase_design_text": """
+- Sagittal T2W FS
+- Axial T1W, T2W, GRE T2W at selected level
+
+If ส่ง neuro -> ไม่ฉีด Gd ทุกกรณี; If ส่ง MSK -> consult fellow
+
+Remark:
+* ถ้าไม่มี cord compression จะไม่ทำ axial view 
+* การวาง plane axial ให้ทำเฉพาะ level ที่สงสัย cord compression โดยวาง coverage ขึ้นข้างบน 2 levels และลงล่าง 2 levels (เช่น lesion T5 ให้วางตั้งแต่ T3-T7)
+* ถ้าสงสัย spinal cord infarct ให้ add sag DWI/ADC ด้วย
+""",
+        "contrast_text": None
     },
     # "protocol_id": {
     #     "protocol_name": protocols_id_name["protocol_id"],

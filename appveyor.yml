@@ -7,14 +7,14 @@ stack: python 3.10
 
 environment:
   GITHUB_TOKEN:
-    secure: cq5sCIvjUPBY6V+SOp37WUp2wVX0g0XpSdAEg9sByCNvhKeGI+JWLSP8cjcligrB+oHCUyJVnWflZn00Tw5qjg5DgUHFysqZN1hW+QuCJa2fQgrgmgISVQOn3ol96GDD
+    secure: cq5sCIvjUPBY6V+SOp37WdQDB/EvEvjgkd5zPEBrdWrby1xn7h9cp1FNPVoUPFdCNkRhlgWxBzo4PuQuwc5zOlCSVJk38DlMmGV46ZUPaHaTwWbsbf+fbUhLq5JCa2qt
 
 install:
 - pip install -r requirements.txt
 - pip install pyinstaller pillow
 
 build_script:
-- flet pack main.py --name DesignCTER --icon assets/icon.png --product-name DesignCTER --product-version "0.2.0" --copyright "Copyright (c) 2024 Lightbridge-KS."
+- flet pack main.py --name DesignCTER --icon assets/icon.png --product-name DesignCTER --product-version "0.3.0-alpha" --copyright "Copyright (c) 2024 Lightbridge-KS."
 
 test: off
 

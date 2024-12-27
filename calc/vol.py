@@ -16,7 +16,7 @@ def prostate_vol(x: List[float]):
         dx = "Enlarged"
         
     # return f"Prostate vol: {round(v, 2)} ml ({dx})"
-    return f"{dx} size of prostate gland, measuring {round(v, 1)} ml in volume."
+    return f"{dx} size of prostate gland, measuring {round(v)} ml in volume."
 
 
 
