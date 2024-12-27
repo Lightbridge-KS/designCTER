@@ -27,7 +27,9 @@ jobs:
       - name: Build Web
         run: |
             flet build web
-
+        env:
+          PUB_CACHE: /home/runner/.pub-cache
+          
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v2
         with:
