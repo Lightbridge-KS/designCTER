@@ -26,6 +26,9 @@ protocols_df_body <- protocols_df |> filter(exam_name %in% flatten_chr(exam_id_n
 
 protocols_df_neuro <- protocols_df |> filter(exam_name %in% c(flatten_chr(exam_id_name$Neuro), "CTA Brain", "CTV Brain"))
 
+protocols_df_neuro_mr_spine <- protocols_df |> 
+  filter(exam_name %in% "MRI Screening Whole Spine")
+
 protocols_df_trauma <- protocols_df |> filter(
   protocol_name %in% c(protocols_id_name$cta_neck_trauma, 
                    protocols_id_name$ct_facial_trauma,
@@ -37,6 +40,7 @@ protocols_df_trauma <- protocols_df |> filter(
                    protocols_id_name$ct_second_look_abd)
   )
 ```
+
 
 ```{r include=FALSE}
 exam_id_protocol_id$ct_body_trauma
@@ -210,7 +214,9 @@ protocols_df_body_ctarunoff_tbl
 ```
 
 
-## Neuro CT
+## Neuro
+
+### CT Neuro
 
 ```{r protocols_df_neuro_tbl, echo=FALSE}
 protocols_df_neuro_tbl <- protocols_df_neuro |> 
@@ -219,6 +225,14 @@ protocols_df_neuro_tbl <- protocols_df_neuro |>
   opt_stylize(style = 3, color = "cyan")
 
 protocols_df_neuro_tbl
+```
+### MRI Spine
+
+```{r protocols_df_mr_spine_tbl, echo=FALSE}
+protocols_df_neuro_mr_spine %>% 
+  gt_custom() |> 
+  cols_label(exam_name = "Exam") |> 
+  opt_stylize(style = 3, color = "cyan")
 ```
 
 ## Trauma CT
@@ -231,7 +245,6 @@ protocols_df_trauma_tbl <- protocols_df_trauma |>
 
 protocols_df_trauma_tbl
 ```
-
 
 
 
