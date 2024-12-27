@@ -14,7 +14,9 @@ book:
   date: today
   chapters:
     - index.md
+    - protocols-basic.md
     - protocols-docs.qmd
+    - reference.qmd
 
 format: 
   html: 
@@ -22,7 +24,12 @@ format:
     toc-depth: 3
     theme: simplex # lux
   docx:
-    reference-doc: "assets/proprosal-ref.docx"
+    reference-doc: "assets/proprosal-ref-v2.docx"
+    link-bibliography: true
+    link-citations: true
+
+bibliography: "assets/reference.bib"
+csl: "assets/elsevier-with-titles.csl"
 
 freeze: auto
 

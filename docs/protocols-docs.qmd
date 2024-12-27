@@ -1,6 +1,5 @@
----
-title: "Protocols"
----
+# Protocols {#sec-protocols-docs}
+
 
 ```{r setup, include=FALSE}
 here::i_am("docs/protocols-docs.qmd")
@@ -74,7 +73,8 @@ gt_custom <- function(df) {
 # }
 ```
 
-Here are the protocols used in this application. 
+The protocols used in this application were adapted from Ramathibodi emergency radiology handbook @erad_book.
+
 
 ## Body CT
 
@@ -134,6 +134,11 @@ protocols_df_body_ctkub_tbl <- protocols_df_body |>
 
 protocols_df_body_ctkub_tbl
 ```
+
+In cases of suspected urothelial or renal tumor:
+
+- The patient should have a full bladder before undergoing a CT scan. 
+- Consider clamping the Foley catheter or instilling NSS into the bladder for patients on continuous bladder irrigation (CBI).
 
 ### CTA for PE
 
