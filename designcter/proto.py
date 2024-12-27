@@ -1,13 +1,26 @@
 # Hierarchical structure Levels
 # `category` -> `exam` -> `protocol`
+from typing import TypedDict, Dict, List, Annotated
 
 # Level 1 
 category = ["Body", "Neuro", "Trauma"]
 
+
 # Level 2
 ## Map `exam_id` to `exam_name`
 ## The order of this dict appeared in drop down
-exam_id_name = {
+
+ExamIDToExamName = Annotated[Dict[str, str], "Maps exam_id to exam_name"]
+
+class ExamIDName(TypedDict):
+    """
+    A TypedDict representing the mapping of exam types to their corresponding exam ID to exam name mappings.
+    """
+    Body: ExamIDToExamName
+    Neuro: ExamIDToExamName
+    Trauma: ExamIDToExamName
+
+exam_id_name: ExamIDName = {
     "Body": {
         # exam_id: exam_name
         "ct_wa": "CTWA",
@@ -89,41 +102,41 @@ exam_id_protocol_id = {
         "cta_chest_hemoptysis",
         "cta_chest_trauma"
     ],
-    "cta_aorta": {
+    "cta_aorta": [
         "cta_aorta_first",
         "cta_aorta_dissect",
         "cta_aorta_aaa_postop"
-    },
-    "cta_runoff": {
+    ],
+    "cta_runoff": [
         "cta_runoff_old",
         "cta_runoff_young"
-    },
+    ],
     # Neuro
-    "ct_brain_nc": {
+    "ct_brain_nc": [
         "ct_brain_nc_routine"
-    },
-    "ct_brain_with_cm": {
+    ],
+    "ct_brain_with_cm": [
         "ct_brain_with_cm_routine"
-    },
-    "cta_ctv_brain": {
+    ],
+    "cta_ctv_brain": [
         "cta_brain_aneurysm",
         "ctv_brain_vst"
-    },
-    "ct_neuro_trauma": {
+    ],
+    "ct_neuro_trauma": [
         "cta_neck_trauma",
         "ct_facial_trauma",
         "ct_orbit_trauma"
-    },
-    "ct_body_trauma": {
+    ],
+    "ct_body_trauma": [
         "pan_scan",
         "cta_blunt_abd",
         "cta_penetrate_abd",
         "ct_second_look_abd",
         "cta_chest_trauma"
-    },
-    "mri_spine": {
+    ],
+    "mri_spine": [
         "mri_screening_whole_spine"
-    }
+    ]
 }
 
 
