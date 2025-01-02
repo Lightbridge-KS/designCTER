@@ -838,10 +838,13 @@ protocols = {
         "protocol_name": None,
         "exam_name": protocols_id_name["mri_screening_whole_spine"],
         "phase_design_text": """
-- Sagittal T2W FS
-- Axial T1W, T2W, GRE T2W at selected level
+1. Sagittal T2FS ทำ 3 stacks แยก C-T-LS spine คนละ Series
+2. Check ภาพ
+  - ถ้าไม่มี cord compression เลิกเคสได้เลย
+  - ถ้ามี ให้วาง Plane Axial ใน level ที่สงสัย cord compression 
+3. Axial ทำ 3 sequences ได้แก่ T2W, T1W, GRE T2W
 
-If ส่ง neuro -> ไม่ฉีด Gd ทุกกรณี; If ส่ง MSK -> consult fellow
+If ส่ง neuro -> **ไม่ฉีด Gd ทุกกรณี**; If ส่ง MSK -> consult fellow
 
 Remark:
 * ถ้าไม่มี cord compression จะไม่ทำ axial view 
