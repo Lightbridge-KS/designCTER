@@ -169,6 +169,7 @@ class ProtocolData {
       'ct_whole_abd_routine': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_routine']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous (whole)
 - Delay (liver)
@@ -179,6 +180,7 @@ class ProtocolData {
       'ct_whole_abd_full': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': false,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole)
 - Late A (upper)
@@ -191,6 +193,7 @@ class ProtocolData {
       'ct_whole_abd_solid_rupture': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_solid_rupture']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole)
 - Late A (upper)
@@ -203,6 +206,7 @@ class ProtocolData {
       'ct_whole_abd_free_air': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_free_air']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain
 - Venous (may be)
@@ -213,6 +217,7 @@ class ProtocolData {
       'ct_whole_abd_gi_perforate': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_gi_perforate']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous
 - Delay (liver)
@@ -223,6 +228,7 @@ class ProtocolData {
       'ct_whole_abd_gut_obs': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_gut_obs']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous (whole)
 - Delay 3 min (liver)
@@ -233,6 +239,7 @@ class ProtocolData {
       'ct_whole_abd_hbp_mass': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_hbp_mass']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (upper)
 - Late A (upper)
@@ -245,6 +252,7 @@ class ProtocolData {
       'ct_whole_abd_kidney_mass': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_kidney_mass']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (KUB)
 - Late A (upper)
@@ -257,6 +265,7 @@ class ProtocolData {
       'ct_whole_abd_gi_mass': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_gi_mass']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous (whole)
 - Delay (liver)
@@ -267,6 +276,7 @@ class ProtocolData {
       'ct_whole_abd_diver': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_diver']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous (whole)
 - Delay (liver)
@@ -277,6 +287,7 @@ class ProtocolData {
       'ct_whole_abd_pancrea': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_pancrea']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (upper)
 - Late A (upper)
@@ -289,6 +300,7 @@ class ProtocolData {
       'ct_whole_abd_infect': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_infect']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole)
 - Late A (upper)
@@ -301,6 +313,7 @@ class ProtocolData {
       'ct_whole_abd_leak_fist_collect': {
         'examName': idDispMap['ct_whole_abd']!,
         'protocolName': idDispMap['ct_whole_abd_leak_fist_collect']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous (whole)
 - Delay (liver)
@@ -314,6 +327,7 @@ class ProtocolData {
       'ct_upper_abd_routine': {
         'examName': idDispMap['ct_upper_abd']!,
         'protocolName': idDispMap['ct_upper_abd_routine']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous (upper)
 - Delay (upper)
@@ -324,6 +338,7 @@ class ProtocolData {
       'ct_upper_abd_hbp_mass': {
         'examName': idDispMap['ct_upper_abd']!,
         'protocolName': idDispMap['ct_upper_abd_hbp_mass']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (upper)
 - Late A (upper)
@@ -336,6 +351,7 @@ class ProtocolData {
       'ct_upper_abd_biliary_stone': {
         'examName': idDispMap['ct_upper_abd']!,
         'protocolName': idDispMap['ct_upper_abd_biliary_stone']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (upper)
 - Late A (upper)
@@ -348,6 +364,7 @@ class ProtocolData {
       'ct_upper_abd_adrenal_mass': {
         'examName': idDispMap['ct_upper_abd']!,
         'protocolName': idDispMap['ct_upper_abd_adrenal_mass']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (upper)
 - Late A (upper)
@@ -363,6 +380,7 @@ class ProtocolData {
       'ct_lower_abd_appendix': {
         'examName': idDispMap['ct_lower_abd']!,
         'protocolName': idDispMap['ct_lower_abd_appendix']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous 120 sec (L3 to pubic symphysis)
 ''',
@@ -375,6 +393,7 @@ class ProtocolData {
       'ct_kub_nc': {
         'examName': 'CT KUB (non-contrast)',
         'protocolName': false,
+        'useIVcontrast': false,
         'phaseDesignText': '''
 - Plain KUB (kidneys to pubic symphysis)
 *** Check ภาพก่อนเลิก
@@ -385,6 +404,7 @@ class ProtocolData {
       'ct_kub_stone': {
         'examName': 'CT KUB (non-contrast)',
         'protocolName': idDispMap['ct_kub_stone']!,
+        'useIVcontrast': false,
         'phaseDesignText': '''
 - Plain KUB (kidneys to pubic symphysis)
 *** Check ภาพก่อนเลิก
@@ -395,6 +415,7 @@ class ProtocolData {
       'ct_kub_hematuria': {
         'examName': idDispMap['ct_kub']!,
         'protocolName': idDispMap['ct_kub_hematuria']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (KUB)
 - Late A (Kidney)
@@ -408,6 +429,7 @@ class ProtocolData {
       'ct_kub_kidney_mass': {
         'examName': idDispMap['ct_kub']!,
         'protocolName': idDispMap['ct_kub_kidney_mass']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 *** If suspect renal mass → consider CTWA for staging
 - Plain (KUB)
@@ -425,6 +447,7 @@ class ProtocolData {
       'cta_whole_abd_gi_bleed': {
         'examName': idDispMap['cta_whole_abd']!,
         'protocolName': idDispMap['cta_whole_abd_gi_bleed']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole)
 - CTA (whole)
@@ -437,6 +460,7 @@ class ProtocolData {
       'cta_whole_abd_mesenteric_ischemia': {
         'examName': idDispMap['cta_whole_abd']!,
         'protocolName': idDispMap['cta_whole_abd_mesenteric_ischemia']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole)
 - CTA (whole)
@@ -449,6 +473,7 @@ class ProtocolData {
       'cta_whole_abd_aaa_rupture': {
         'examName': idDispMap['cta_whole_abd']!,
         'protocolName': idDispMap['cta_whole_abd_aaa_rupture']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole)
 - CTA (maybe ถ้ามีเวลา คนไข้ stable)
@@ -462,6 +487,7 @@ class ProtocolData {
       'cta_pe_no_dvt': {
         'examName': idDispMap['cta_pe']!,
         'protocolName': idDispMap['cta_pe_no_dvt']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - CTPA (chest)
 - Venous (chest)
@@ -471,6 +497,7 @@ class ProtocolData {
       'cta_pe_with_dvt': {
         'examName': idDispMap['cta_pe']!,
         'protocolName': idDispMap['cta_pe_with_dvt']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - CTPA (chest)
 - Venous (chest, legs)
@@ -484,6 +511,7 @@ class ProtocolData {
       'ct_chest_routine': {
         'examName': idDispMap['ct_chest']!,
         'protocolName': idDispMap['ct_chest_routine']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - **maybe** plain (chest)
 - Late A (chest)
@@ -494,6 +522,7 @@ class ProtocolData {
       'ct_chest_nc': {
         'examName': 'CT Chest (non-contrast)',
         'protocolName': false,
+        'useIVcontrast': false,
         'phaseDesignText': '''
 - plain (chest)
 ''',
@@ -503,6 +532,7 @@ class ProtocolData {
       'ct_chest_nodule_mass': {
         'examName': idDispMap['ct_chest']!,
         'protocolName': idDispMap['ct_chest_nodule_mass']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (chest)
 - Late A (chest)
@@ -513,6 +543,7 @@ class ProtocolData {
       'ct_chest_tbm': {
         'examName': idDispMap['ct_chest']!,
         'protocolName': idDispMap['ct_chest_tbm']!,
+        'useIVcontrast': false,
         'phaseDesignText': '''
 - Plain (chest, dynamic expiration)
 ''',
@@ -522,6 +553,7 @@ class ProtocolData {
       'ct_chest_dysphagia': {
         'examName': idDispMap['ct_chest']!,
         'protocolName': idDispMap['ct_chest_dysphagia']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (chest)
 - Venous (chest)
@@ -532,6 +564,7 @@ class ProtocolData {
       'ct_chest_eso': {
         'examName': idDispMap['ct_chest']!,
         'protocolName': idDispMap['ct_chest_eso']!,
+        'useIVcontrast': false,
         'phaseDesignText': '''
 - Plain (Chest, reduced dose) ก่อนกิน CM
 - จากนั้น กิน CM 1 cup (250 ml) ที่เตียง
@@ -543,6 +576,7 @@ class ProtocolData {
       'ct_chest_svc': {
         'examName': idDispMap['ct_chest']!,
         'protocolName': idDispMap['ct_chest_svc']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (Chest, reduced dose)
 - Late A (Chest)
@@ -554,6 +588,7 @@ class ProtocolData {
       'ct_chest_whole_abd_full': {
         'examName': idDispMap['ct_chest_whole_abd']!,
         'protocolName': false,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (Chest + Whole abd)
 - Late A (Chest + Upper abd)
@@ -569,6 +604,7 @@ class ProtocolData {
       'cta_chest_hemoptysis': {
         'examName': idDispMap['cta_chest']!,
         'protocolName': idDispMap['cta_chest_hemoptysis']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (Chest)
 - CTA (Apex to L2) → Dual bolus
@@ -581,6 +617,7 @@ class ProtocolData {
       'cta_chest_trauma': {
         'examName': idDispMap['cta_chest']!,
         'protocolName': idDispMap['cta_chest_trauma']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - CTA (chest)
 - Venous (chest)
@@ -594,6 +631,7 @@ class ProtocolData {
       'cta_aorta_first': {
         'examName': idDispMap['cta_aorta']!,
         'protocolName': idDispMap['cta_aorta_first']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole aorta)
 - CTA (whole aorta)
@@ -605,6 +643,7 @@ class ProtocolData {
       'cta_aorta_dissect': {
         'examName': idDispMap['cta_aorta']!,
         'protocolName': idDispMap['cta_aorta_dissect']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole aorta)
 - CTA (whole aorta)
@@ -616,6 +655,7 @@ class ProtocolData {
       'cta_aorta_aaa_postop': {
         'examName': idDispMap['cta_aorta']!,
         'protocolName': idDispMap['cta_aorta_aaa_postop']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (whole aorta)
 - CTA (whole aorta)
@@ -629,6 +669,7 @@ class ProtocolData {
       'cta_runoff_old': {
         'examName': idDispMap['cta_runoff']!,
         'protocolName': idDispMap['cta_runoff_old']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 ขา → Aortic bifurcation to feet
 แขน → mid-heart to hands
@@ -641,6 +682,7 @@ class ProtocolData {
       'cta_runoff_young': {
         'examName': idDispMap['cta_runoff']!,
         'protocolName': idDispMap['cta_runoff_young']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 ขา → Aortic bifurcation to feet
 แขน → mid-heart to hands
@@ -656,12 +698,14 @@ class ProtocolData {
       'ct_brain_nc_routine': {
         'examName': idDispMap['ct_brain_nc']!,
         'protocolName': false,
+        'useIVcontrast': false,
         'phaseDesignText': false,
         'contrastText': 'No IV contrast',
       },
       'ct_brain_with_cm_routine': {
         'examName': idDispMap['ct_brain_with_cm']!,
         'protocolName': false,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain, post-contrast (Brain)
 ''',
@@ -671,6 +715,7 @@ class ProtocolData {
       'cta_brain_aneurysm': {
         'examName': 'CTA Brain',
         'protocolName': idDispMap['cta_brain_aneurysm']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain, CTA, post-contrast (Brain)
 ''',
@@ -679,6 +724,7 @@ class ProtocolData {
       'ctv_brain_vst': {
         'examName': 'CTV Brain',
         'protocolName': idDispMap['ctv_brain_vst']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain, CTV, post-contrast (Brain)
 ''',
@@ -691,6 +737,7 @@ class ProtocolData {
       'cta_neck_trauma': {
         'examName': 'CTA Neck',
         'protocolName': idDispMap['cta_neck_trauma']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - CTA (brain, neck) COW to arch
 - Post-contrast (brain)
@@ -701,6 +748,7 @@ class ProtocolData {
       'ct_facial_trauma': {
         'examName': 'CT Facial Bone (non-contrast)',
         'protocolName': idDispMap['ct_facial_trauma']!,
+        'useIVcontrast': false,
         'phaseDesignText': '''
 - CT Facial Bones (plain) with 3D reformats
 ''',
@@ -710,6 +758,7 @@ class ProtocolData {
       'ct_orbit_trauma': {
         'examName': 'CT Orbit (non-contrast)',
         'protocolName': idDispMap['ct_orbit_trauma']!,
+        'useIVcontrast': false,
         'phaseDesignText': false,
         'contrastText': 'No IV contrast',
       },
@@ -717,6 +766,7 @@ class ProtocolData {
       'pan_scan': {
         'examName': idDispMap['pan_scan']!,
         'protocolName': false,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Plain (Brain) [arms down]
 - Arterial (COW → pubic symphysis) [arms up]
@@ -730,6 +780,7 @@ class ProtocolData {
       'cta_blunt_abd': {
         'examName': idDispMap['cta_whole_abd']!,
         'protocolName': idDispMap['cta_blunt_abd']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - CTA (whole)
 - Venous (whole)
@@ -741,6 +792,7 @@ class ProtocolData {
       'cta_penetrate_abd': {
         'examName': idDispMap['cta_whole_abd']!,
         'protocolName': idDispMap['cta_penetrate_abd']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - CTA (whole)
 - Venous (whole)
@@ -753,6 +805,7 @@ class ProtocolData {
       'ct_second_look_abd': {
         'examName': idDispMap['cta_whole_abd']!,
         'protocolName': idDispMap['ct_second_look_abd']!,
+        'useIVcontrast': true,
         'phaseDesignText': '''
 - Venous (whole)
 ''',
@@ -776,6 +829,7 @@ Remark:
 * การวาง plane axial ให้ทำเฉพาะ level ที่สงสัย cord compression โดยวาง coverage ขึ้นข้างบน 2 levels และลงล่าง 2 levels (เช่น lesion T5 ให้วางตั้งแต่ T3-T7)
 * ถ้าสงสัย spinal cord infarct ให้ add sag DWI/ADC ด้วย
 ''',
+        'useIVcontrast': false,
       },
     },
   };
