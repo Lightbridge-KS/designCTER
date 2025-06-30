@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class ProtocolData {
   // ID-based hierarchical mapping from: `category_id` -> `exam_id` -> `protocol_id`
+  // These will appear in the app dropdown level 1, 2, and 3, respectively. 
   static const Map<String, Map<String, List<String>>> choiceIdMap = {
     'body': {
       'ct_whole_abd': [
@@ -79,7 +80,7 @@ class ProtocolData {
     },
   };
 
-  // ID to Display name mapping (what users see)
+  // ID to Display name mapping (what users see in the dropdown)
   static const Map<String, String> idDispMap = {
     // Category: `category_id` -> `category_name`
     'body': 'Body',

@@ -5,8 +5,7 @@ import '_utils.dart';
 
 /// A Flutter class for generating CT and MRI protocol templates in emergency departments.
 /// 
-/// The `Designer` class is a migration from a Python-based DesignCTER application using 
-/// the `flet` package. It generates medical imaging protocol templates by combining 
+/// The `Designer` class generates medical imaging protocol templates by combining 
 /// protocol data with user-provided parameters using Mustache templating.
 /// 
 /// **Example usage:**
