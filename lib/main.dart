@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'designcter/protocol.dart';
+import 'widgets/dropdowns_three.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,116 +9,282 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'DesignCTER',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const ProtocolSelectorPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
+class ProtocolSelectorPage extends StatefulWidget {
+  const ProtocolSelectorPage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<ProtocolSelectorPage> createState() => _ProtocolSelectorPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _ProtocolSelectorPageState extends State<ProtocolSelectorPage> {
+  // State to hold the dropdown selections
+  Map<String, String?> _protocolSelection = {
+    'level1': null, // Category
+    'level2': null, // Exam
+    'level3': null, // Protocol
+  };
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
+  // Helper method to get display name from ID
+  String _getDisplayName(String? id) {
+    if (id == null) return 'Not selected';
+    return ProtocolData.idDispMap[id] ?? id;
+  }
+
+  // Check if all selections are complete
+  bool get _isSelectionComplete {
+    return _protocolSelection['level1'] != null &&
+           _protocolSelection['level2'] != null &&
+           _protocolSelection['level3'] != null;
   }
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
+        title: const Text('DesignCTER - Protocol Selector'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
       ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Header
+            const Text(
+              'CT Protocol Template Generator',
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
             ),
+            const SizedBox(height: 8),
+            
+            // The three-level dropdowns component
+            ThreeLevelDropdowns(
+              choiceIdMap: ProtocolData.choiceIdMap,
+              idDispMap: ProtocolData.idDispMap,
+              onSelectionChanged: (selectionMap) {
+                setState(() {
+                  _protocolSelection = selectionMap;
+                });
+                // Print selections to console for debugging
+                print('=== Protocol Selection Debug ===');
+                print('Category ID: ${selectionMap['level1']}');
+                print('Exam ID: ${selectionMap['level2']}');
+                print('Protocol ID: ${selectionMap['level3']}');
+                print('Category Name: ${_getDisplayName(selectionMap['level1'])}');
+                print('Exam Name: ${_getDisplayName(selectionMap['level2'])}');
+                print('Protocol Name: ${_getDisplayName(selectionMap['level3'])}');
+                print('Selection Complete: $_isSelectionComplete');
+                print('================================');
+              },
+            ),
+
+            const SizedBox(height: 32),
+
+            // Selection display section
+            if (_protocolSelection['level1'] != null) ...[
+              _buildSelectionDisplay(),
+              const SizedBox(height: 24),
+            ],
+
+            // Action buttons
+            _buildActionButtons(),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+
+  /// Builds the selection display card
+  Widget _buildSelectionDisplay() {
+    return Card(
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  _isSelectionComplete ? Icons.check_circle : Icons.radio_button_unchecked,
+                  color: _isSelectionComplete ? Colors.green : Colors.orange,
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  _isSelectionComplete ? 'Selection Complete' : 'Selection in Progress',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                    color: _isSelectionComplete ? Colors.green : Colors.orange,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            _buildSelectionRow('Category', _protocolSelection['level1']),
+            _buildSelectionRow('Exam', _protocolSelection['level2']),
+            _buildSelectionRow('Protocol', _protocolSelection['level3']),
+            
+            if (_isSelectionComplete) ...[
+              const SizedBox(height: 16),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.green.shade50,
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.green.shade200),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      'Selected Protocol:',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      '${_getDisplayName(_protocolSelection['level3'])} (${_getDisplayName(_protocolSelection['level2'])}, ${_getDisplayName(_protocolSelection['level1'])})',
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  /// Helper to build individual selection rows
+  Widget _buildSelectionRow(String label, String? valueId) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4),
+      child: Row(
+        children: [
+          SizedBox(
+            width: 100,
+            child: Text(
+              '$label:',
+              style: const TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 16,
+              ),
+            ),
+          ),
+          Expanded(
+            child: Text(
+              _getDisplayName(valueId),
+              style: TextStyle(
+                fontSize: 16,
+                color: valueId != null ? Colors.black : Colors.grey,
+                fontStyle: valueId != null ? FontStyle.normal : FontStyle.italic,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// Builds action buttons section
+  Widget _buildActionButtons() {
+    return Row(
+      children: [
+        Expanded(
+          child: ElevatedButton.icon(
+            onPressed: () {
+              setState(() {
+                _protocolSelection = {
+                  'level1': null,
+                  'level2': null,
+                  'level3': null,
+                };
+              });
+              print('=== Protocol Selection Reset ===');
+            },
+            icon: const Icon(Icons.refresh),
+            label: const Text('Reset'),
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 12),
+            ),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: ElevatedButton.icon(
+            onPressed: _isSelectionComplete ? () => _generateProtocol() : null,
+            icon: const Icon(Icons.description),
+            label: const Text('Generate Template'),
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(vertical: 12),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// Handle protocol generation
+  void _generateProtocol() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Protocol Template Generated'),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Selected protocol:'),
+            const SizedBox(height: 8),
+            Text(
+              'Category: ${_getDisplayName(_protocolSelection['level1'])}',
+              style: const TextStyle(fontWeight: FontWeight.w500),
+            ),
+            Text(
+              'Exam: ${_getDisplayName(_protocolSelection['level2'])}',
+              style: const TextStyle(fontWeight: FontWeight.w500),
+            ),
+            Text(
+              'Protocol: ${_getDisplayName(_protocolSelection['level3'])}',
+              style: const TextStyle(fontWeight: FontWeight.w500),
+            ),
+            const SizedBox(height: 12),
+            const Text(
+              'Template generation will be implemented in the next steps.',
+              style: TextStyle(fontStyle: FontStyle.italic),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('OK'),
+          ),
+        ],
+      ),
     );
   }
 }
