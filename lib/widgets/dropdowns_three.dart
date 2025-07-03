@@ -163,7 +163,7 @@ class _ThreeLevelDropdownsState extends State<ThreeLevelDropdowns> {
   Widget _buildDropdownSection({
     required String? title,
     required String? subtitle,
-    required String? hintText,
+    required String hintText,
     required String? value,
     required List<String> items,
     required ValueChanged<String?> onChanged,
@@ -197,6 +197,7 @@ class _ThreeLevelDropdownsState extends State<ThreeLevelDropdowns> {
           hintText: hintText ?? 'Select an option',
           onSelected: isEnabled ? onChanged : null,
           enabled: isEnabled,
+          label: Text(hintText), 
           dropdownMenuEntries: _buildMenuEntries(items),
         ),
       ],
