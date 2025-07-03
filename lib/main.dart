@@ -37,12 +37,6 @@ class _ProtocolDesignPageState extends State<ProtocolDesignPage> {
     'level3': null, // Protocol
   };
 
-  // Helper method to get display name from ID
-  String _getDisplayName(String? id) {
-    if (id == null) return 'Not selected';
-    return ProtocolData.idDispMap[id] ?? id;
-  }
-
   // Check if all selections are complete
   bool get _isSelectionComplete {
     return _protocolSelection['level1'] != null &&
