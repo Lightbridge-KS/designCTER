@@ -193,7 +193,7 @@ class _ThreeLevelDropdownsState extends State<ThreeLevelDropdowns> {
           const SizedBox(height: 8),
         ],
         DropdownMenu<String>(
-          width: double.infinity,
+          width: MediaQuery.of(context).size.width * 0.5, // Adjust this factor as needed
           hintText: hintText ?? 'Select an option',
           onSelected: isEnabled ? onChanged : null,
           enabled: isEnabled,
