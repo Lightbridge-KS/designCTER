@@ -275,21 +275,15 @@ class Designer {
     };
 
     // Add optional fields if they exist
-    if (examName != null) {
-      data['examName'] = examName;
-    }
+    data['examName'] = examName;
+    data['protocolName'] = protocolName;
 
-    if (protocolName != null && protocolName != false) {
-      data['protocolName'] = protocolName;
+    if (phaseDesignText is String) {
+      data['phaseDesignText'] = phaseDesignText.trim();
+    } else {
+      data['phaseDesignText'] = phaseDesignText;
     }
-
-    if (phaseDesignText != null && phaseDesignText != false) {
-      data['phaseDesignText'] = (phaseDesignText as String).trim();
-    }
-
-    if (contrastText != null) {
-      data['contrastText'] = contrastText;
-    }
+    data['contrastText'] = contrastText;
 
     if (useIVContrast) {
       data['useIVcontrast'] = true;
@@ -299,6 +293,8 @@ class Designer {
       data['renalPremed'] = renalPremedValue;
       data['allergyPremed'] = allergyPremedValue;
       data['pregnancy'] = pregnancyValue;
+    } else {
+      data['useIVcontrast'] = false;
     }
 
     return data;
