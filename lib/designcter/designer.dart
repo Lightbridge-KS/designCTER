@@ -110,7 +110,9 @@ class Designer {
   /// ```
   Future<String> generate() async {
     // Check if it's MRI protocol
-    if (protocolId == 'mri_screening_whole_spine') {
+    List<String> mriProtocolIds =  ['mri_screening_whole_spine'];
+
+    if (mriProtocolIds.contains(protocolId)) {
       return await designMR();
     } else {
       return await designCT();
