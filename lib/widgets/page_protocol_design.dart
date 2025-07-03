@@ -4,7 +4,14 @@ import '../designcter/designer.dart';
 import 'input_design.dart';
 
 class ProtocolDesignPage extends StatefulWidget {
-  const ProtocolDesignPage({super.key});
+  final ThemeMode themeMode;
+  final VoidCallback onThemeToggle;
+  
+  const ProtocolDesignPage({
+    super.key,
+    required this.themeMode,
+    required this.onThemeToggle,
+  });
 
   @override
   State<ProtocolDesignPage> createState() => _ProtocolDesignPageState();
@@ -87,12 +94,29 @@ class _ProtocolDesignPageState extends State<ProtocolDesignPage> {
     );
   }
 
+  /// Get the appropriate theme icon based on current theme mode
+  IconData _getThemeIcon() {
+    // If system mode, check actual brightness
+    if (widget.themeMode == ThemeMode.system) {
+      final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;
+      return brightness == Brightness.dark ? Icons.dark_mode_outlined : Icons.brightness_5;
+    }
+    
+    // For explicit light/dark modes
+    return widget.themeMode == ThemeMode.dark ? Icons.dark_mode_outlined : Icons.brightness_5;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Design CTER Protocol', style: TextStyle(fontWeight: FontWeight.bold)),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        leading: IconButton(
+          icon: Icon(_getThemeIcon()),
+          onPressed: widget.onThemeToggle,
+          tooltip: 'Toggle theme',
+        ),
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
@@ -220,6 +244,10 @@ class _ProtocolDesignPageState extends State<ProtocolDesignPage> {
                   onPressed: _isSelectionComplete ? _generateProtocol : null,
                   icon: const Icon(Icons.create),
                   label: const Text('Generate'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.grey[300],
+                    foregroundColor: Colors.black87,
+                    ),
                 ),
                 const SizedBox(width: 8),
                 IconButton(
@@ -235,10 +263,6 @@ class _ProtocolDesignPageState extends State<ProtocolDesignPage> {
               onPressed: _resetInputs,
               icon: const Icon(Icons.refresh),
               label: const Text('Reset'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey[300],
-                foregroundColor: Colors.black87,
-              ),
             ),
           ],
         ),

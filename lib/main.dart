@@ -3,7 +3,9 @@ import 'package:flutter/foundation.dart';
 // Conditional imports - only import window_manager on non-web platforms
 import 'window_manager_stub.dart' if (dart.library.io) 'package:window_manager/window_manager.dart';
 
-
+import 'assets/theme_brown.dart';
+// import 'assets/theme_green.dart';
+// import 'assets/theme_blue.dart';
 import 'widgets/page_protocol_design.dart';
 
 
@@ -18,18 +20,47 @@ void main() async {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
   @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  ThemeMode _themeMode = ThemeMode.system;
+
+  void _toggleTheme() {
+    setState(() {
+      switch (_themeMode) {
+        case ThemeMode.system:
+          // If system, check current brightness and toggle to opposite
+          final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;
+          _themeMode = brightness == Brightness.dark ? ThemeMode.light : ThemeMode.dark;
+          break;
+        case ThemeMode.light:
+          _themeMode = ThemeMode.dark;
+          break;
+        case ThemeMode.dark:
+          _themeMode = ThemeMode.light;
+          break;
+      }
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final materialTheme = MaterialTheme(Theme.of(context).textTheme);
+    
     return MaterialApp(
       title: 'DesignCTER',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        useMaterial3: true,
+      theme: materialTheme.light(),
+      darkTheme: materialTheme.dark(),
+      themeMode: _themeMode,
+      home: ProtocolDesignPage(
+        themeMode: _themeMode,
+        onThemeToggle: _toggleTheme,
       ),
-      home: const ProtocolDesignPage(),
     );
   }
 }
