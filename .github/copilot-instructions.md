@@ -2,7 +2,7 @@
 
 This is a DesignCTER Flutter Application to generate a CT protocol template in emergency department. 
 
-It is a migration app from another DesignCTER app I made using `flet` Python package. 
+It is a migration app from another DesignCTER app I made using `flet` Python package. The design should be mostly similar with some enhancement. However, UI change can happens. 
 
 # What's Changed
 
