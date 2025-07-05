@@ -116,15 +116,13 @@ void main() {
         developer.log('Severe case: $severeResult', name: 'SpineCalculator');
       });
 
-      test('spineHeightLoss throws ArgumentError for negative loss', () {
-        expect(
-          () => SpineCalculator.spineHeightLoss(
+      test('spineHeightLoss return empty string for negative loss', () {
+        final emptyResult = SpineCalculator.spineHeightLoss(
             normalCm: [3.0],
             collapsedCM: [4.0], // Collapsed > normal
-          ),
-          throwsA(isA<ArgumentError>()),
         );
-        developer.log('Negative loss case: correctly throws ArgumentError', name: 'SpineCalculator');
+        expect(emptyResult, equals("")); 
+        developer.log('Negative loss case: return empty string', name: 'SpineCalculator');
       });
 
       test('spineHeightLoss handles edge case percentages', () {
