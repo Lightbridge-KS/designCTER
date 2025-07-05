@@ -4,7 +4,7 @@
 
 ---
 
-- **Desktop app:** see [release](https://github.com/Lightbridge-KS/designcter/releases)
+- **Windows & MacOS app:** [Download ⬇️](https://github.com/Lightbridge-KS/designcter/releases)
 
 - **Web app:** Coming Soon
 
@@ -15,15 +15,39 @@
 
 ### Installation
 
-- [Install Flutter](https://docs.flutter.dev/get-started/install)
+1. **Install Flutter**
+   - Follow the official [Flutter installation guide](https://docs.flutter.dev/get-started/install)
+   - Verify installation: `flutter doctor`
 
+2. **Clone the repository**
+   ```shell
+   git clone https://github.com/Lightbridge-KS/designcter.git
+   cd designcter
+   ```
 
-### Build app
+3. **Install dependencies**
+   ```shell
+   flutter pub get
+   ```
+
+### Build Application
+
+#### Development Build
 
 ```shell
-cd to/directory/root
-# Build
+# Run in development mode
+flutter run
+```
+
+#### Production Build
+
+```shell
+# Navigate to project directory
+cd /path/to/designcter
+
+# Build for specific platform
 flutter build <target_platform>
 ```
 
-`<target_platform>` could be one of the following: `macos`, `windows`
+**Available target platforms:** `macos`, `windows`
+
