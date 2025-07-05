@@ -65,6 +65,9 @@ class SpineCalculator {
     
     // Calculate loss percentage
     double lossPercent = ((normalMean - collapsedMean) / normalMean) * 100;
+    if (lossPercent < 0) {
+      return "";
+    }
     
     // Get diagnosis
     String diagnosis = _spineHeightLossDx(lossPercent: lossPercent);

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import '../components/appbarbundle.dart';
+import 'app_mean.dart';
+import 'app_prostate_volume.dart';
+import 'app_spine.dart';
 
 class CalculatorPage extends StatefulWidget {
   final ThemeMode themeMode;
@@ -26,32 +29,17 @@ class _CalculatorPageState extends State<CalculatorPage> {
         themeMode: widget.themeMode,
         onThemeToggle: widget.onThemeToggle,
       ),
-      body: const Center(
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Icon(
-              Icons.calculate_rounded,
-              size: 64,
-              color: Colors.grey,
-            ),
-            SizedBox(height: 16),
-            Text(
-              'Radiology Calculator Page',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.grey,
-              ),
-            ),
-            SizedBox(height: 8),
-            Text(
-              'Coming Soon...',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-              ),
-            ),
+            AppMeanCalculator(),
+            SizedBox(height: 32),
+            AppProstateVolumeCalculator(),
+            SizedBox(height: 32),
+            AppSpineCalculator(),
+            SizedBox(height: 32),
           ],
         ),
       ),
