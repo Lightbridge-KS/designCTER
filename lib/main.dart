@@ -7,7 +7,7 @@ import 'assets/theme_brown.dart';
 // import 'assets/theme_green.dart';
 // import 'assets/theme_blue.dart';
 import 'widgets/design/page_protocol_design.dart';
-import 'widgets/page_calculator.dart';
+import 'widgets/calculator/page_calculator.dart';
 
 
 void main() async {
