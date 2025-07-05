@@ -6,7 +6,7 @@ import 'window_manager_stub.dart' if (dart.library.io) 'package:window_manager/w
 import 'assets/theme_brown.dart';
 // import 'assets/theme_green.dart';
 // import 'assets/theme_blue.dart';
-import 'widgets/page_protocol_design.dart';
+import 'widgets/design/page_protocol_design.dart';
 import 'widgets/page_calculator.dart';
 
 

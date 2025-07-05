@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../designcter/designer.dart';
+import '../../designcter/designer.dart';
 import 'input_design.dart';
-import 'components/appbarbundle.dart';
+import '../components/appbarbundle.dart';
 
 class ProtocolDesignPage extends StatefulWidget {
   final ThemeMode themeMode;
