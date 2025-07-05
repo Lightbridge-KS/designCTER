@@ -7,6 +7,7 @@ import 'assets/theme_brown.dart';
 // import 'assets/theme_green.dart';
 // import 'assets/theme_blue.dart';
 import 'widgets/page_protocol_design.dart';
+import 'widgets/page_calculator.dart';
 
 
 void main() async {
@@ -29,6 +30,7 @@ class MainApp extends StatefulWidget {
 
 class _MainAppState extends State<MainApp> {
   ThemeMode _themeMode = ThemeMode.system;
+  int _currentPageIndex = 0;
 
   void _toggleTheme() {
     setState(() {
@@ -57,9 +59,38 @@ class _MainAppState extends State<MainApp> {
       theme: materialTheme.light(),
       darkTheme: materialTheme.dark(),
       themeMode: _themeMode,
-      home: ProtocolDesignPage(
-        themeMode: _themeMode,
-        onThemeToggle: _toggleTheme,
+      home: Scaffold(
+        body: IndexedStack(
+          index: _currentPageIndex,
+          children: [
+            ProtocolDesignPage(
+              themeMode: _themeMode,
+              onThemeToggle: _toggleTheme,
+            ),
+            CalculatorPage(
+              themeMode: _themeMode,
+              onThemeToggle: _toggleTheme,
+            ),
+          ],
+        ),
+        bottomNavigationBar: NavigationBar(
+          selectedIndex: _currentPageIndex,
+          onDestinationSelected: (index) {
+            setState(() {
+              _currentPageIndex = index;
+            });
+          },
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.brush_rounded),
+              label: 'Design',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.calculate_rounded),
+              label: 'Calculate',
+            ),
+          ],
+        ),
       ),
     );
   }
