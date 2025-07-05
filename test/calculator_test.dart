@@ -41,6 +41,29 @@ void main() {
         );
         developer.log('Invalid type case: correctly throws ArgumentError', name: 'MeanCalculator');
       });
+
+      test('calculateFromString returns correct type (String) for single value', () {
+        final result = MeanCalculator.calculateFromString('5.5');
+
+        expect(result, isA<String>());
+        expect(result, equals('5.5'));
+        developer.log('Single value from string result: $result', name: 'MeanCalculator');
+      });
+
+      test('calculateFromString returns correct type (String) for multiple values', () {
+        final result = MeanCalculator.calculateFromString('1.1, 1.2, 1.3, 1.4');
+
+        expect(result, isA<String>());
+        expect(result, isNotEmpty);
+        developer.log('Multiple values from string result: $result', name: 'MeanCalculator');
+      });
+
+      test('calculateFromString returns empty string for invalid input', () {
+        final result = MeanCalculator.calculateFromString('invalid');
+
+        expect(result, equals(''));
+        developer.log('Invalid string input result: $result', name: 'MeanCalculator');
+      });
     });
 
     group('SpineCalculator', () {
@@ -121,6 +144,38 @@ void main() {
         expect(result40, contains('Moderate to severe'));
         developer.log('40% loss case: $result40', name: 'SpineCalculator');
       });
+
+      test('spineHeightLossFromString returns correct type (String)', () {
+        final result = SpineCalculator.spineHeightLossFromString(
+          normalCm: '4.5, 4.6, 4.4',
+          collapsedCM: '3.0, 3.1, 2.9',
+        );
+
+        expect(result, isA<String>());
+        expect(result, contains('compression fracture'));
+        developer.log('From string normal case result: $result', name: 'SpineCalculator');
+      });
+
+      test('spineHeightLossFromString handles single values', () {
+        final result = SpineCalculator.spineHeightLossFromString(
+          normalCm: '4.5',
+          collapsedCM: '3.0',
+        );
+
+        expect(result, isA<String>());
+        expect(result, contains('compression fracture'));
+        developer.log('From string single value result: $result', name: 'SpineCalculator');
+      });
+
+      test('spineHeightLossFromString returns empty string for invalid input', () {
+        final result = SpineCalculator.spineHeightLossFromString(
+          normalCm: 'invalid',
+          collapsedCM: '3.0',
+        );
+
+        expect(result, equals(''));
+        developer.log('From string invalid input result: $result', name: 'SpineCalculator');
+      });
     });
 
     group('VolumeCalculator', () {
@@ -157,19 +212,27 @@ void main() {
         developer.log('Wrong dimensions case: correctly throws ArgumentError', name: 'VolumeCalculator');
       });
 
-      test('ellipsoid returns correct type (double)', () {
-        final result = VolumeCalculator.ellipsoid(4.0, 4.0, 4.0);
 
-        expect(result, isA<double>());
-        developer.log('Ellipsoid calculation result: $result', name: 'VolumeCalculator');
+      test('prostateFromString handles space-separated values', () {
+        final result = VolumeCalculator.prostateFromString('4.4 4.5 4.6');
+
+        expect(result, isA<String>());
+        expect(result, contains('prostate gland'));
+        developer.log('Prostate from string space-separated result: $result', name: 'VolumeCalculator');
       });
 
-      test('ellipsoid handles different dimensions', () {
-        final result = VolumeCalculator.ellipsoid(3.0, 4.0, 5.0);
+      test('prostateFromString returns empty string for invalid input', () {
+        final result = VolumeCalculator.prostateFromString('invalid');
 
-        expect(result, isA<double>());
-        expect(result, greaterThan(0));
-        developer.log('Ellipsoid different dimensions result: $result', name: 'VolumeCalculator');
+        expect(result, equals(''));
+        developer.log('Prostate from string invalid input result: $result', name: 'VolumeCalculator');
+      });
+
+      test('prostateFromString returns empty string for wrong number of dimensions', () {
+        final result = VolumeCalculator.prostateFromString('4.4, 4.5');
+
+        expect(result, equals(''));
+        developer.log('Prostate from string wrong dimensions result: $result', name: 'VolumeCalculator');
       });
     });
   });

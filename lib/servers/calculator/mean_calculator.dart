@@ -1,4 +1,5 @@
 import "_statistics.dart"; 
+import '_parser.dart';
 
 /// Mean calculator for statistical calculations
 /// 
@@ -6,6 +7,31 @@ import "_statistics.dart";
 /// Used primarily for dose calculations in radiology
 class MeanCalculator {
   
+  /// Calculate the arithmetic mean from string input
+  /// 
+  /// Parameters:
+  /// - `input`: String representation of numbers (single or comma/space separated)
+  /// 
+  /// Returns:
+  /// - Formatted string with the mean value
+  /// - Empty string if input cannot be parsed
+  static String calculateFromString(String input) {
+    dynamic parsed = parseStrToNumOrList(input);
+    
+    // Handle empty string return from parser
+    if (parsed == "") {
+      return "";
+    }
+    
+    try {
+      double? result = calculate(parsed);
+      return result?.toString() ?? "";
+    } catch (e) {
+      return "";
+    }
+  }
+
+
   /// Calculate the arithmetic mean of a single number or list of numbers
   /// 
   /// Parameters:

@@ -1,8 +1,47 @@
 import '_statistics.dart';
+import '_parser.dart';
 
 /// Calculator for spine height loss and compression fracture assessment
 class SpineCalculator {
   
+  /// Calculates spine height loss from string inputs
+  ///
+  /// Parameters
+  /// ----------
+  /// normalCm : String representation of normal vertebral heights
+  /// collapsedCM : String representation of collapsed vertebral heights
+  ///
+  /// Returns
+  /// -------
+  /// String
+  ///     Formatted string with compression fracture diagnosis and height loss percentage
+  ///
+  /// Throws
+  /// ------
+  /// ArgumentError
+  ///     If string inputs cannot be parsed to valid numbers
+  static String spineHeightLossFromString({required String normalCm, required String collapsedCM}) {
+    // Parse normal heights
+    dynamic normalParsed = parseStrToNumOrList(normalCm);
+    if (normalParsed == "") {
+      return "";
+    }
+    
+    // Parse collapsed heights
+    dynamic collapsedParsed = parseStrToNumOrList(collapsedCM);
+    if (collapsedParsed == "") {
+      return "";
+    }
+    
+    // Convert to lists for consistency
+    List<double> normalList = normalParsed is double ? [normalParsed] : normalParsed;
+    List<double> collapsedList = collapsedParsed is double ? [collapsedParsed] : collapsedParsed;
+    
+    // Call existing method
+    return spineHeightLoss(normalCm: normalList, collapsedCM: collapsedList);
+  }
+
+
   /// Calculates spine height loss percentage and provides diagnostic assessment
   ///
   /// Parameters
