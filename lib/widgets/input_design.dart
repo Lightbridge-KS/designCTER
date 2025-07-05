@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import '../designcter/protocol.dart';
 import '../designcter/_utils.dart';
-import 'dropdowns_three.dart';
+import 'components/dropdowns_three.dart';
 
 /// Input design widget containing all form fields for protocol generation
 class InputDesign extends StatefulWidget {
