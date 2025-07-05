@@ -1,0 +1,19 @@
+# Adapted from: https://github.com/fastforgedev/fastforge/blob/main/examples/hello_world/distribute_options.yaml 
+
+output: dist/
+variables:
+  # FLUTTER_ROOT: ~/fvm/versions/3.16.5
+  # PGYER_API_KEY: your api key
+releases:
+  - name: dev-release
+    jobs:
+      - name: windows-exe
+        package:
+          platform: windows
+          target: exe
+      - name: macos-dmg
+        package:
+          platform: macos
+          target: dmg
+          build_args:
+            profile: true
