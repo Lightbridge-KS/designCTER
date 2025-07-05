@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../../designcter/designer.dart';
+import '../../servers/designcter/designer.dart';
 import 'input_design.dart';
 import '../components/appbarbundle.dart';
 
