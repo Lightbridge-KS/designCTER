@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import '../../designcter/protocol.dart';
-import '../../designcter/_utils.dart';
+import '../../servers/designcter/protocol.dart';
+import '../../servers/designcter/_utils.dart';
 import '../components/dropdowns_three.dart';
 
 /// Input design widget containing all form fields for protocol generation

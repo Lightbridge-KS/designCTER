@@ -1,6 +1,6 @@
 // ignore_for_file: avoid_print
 
-import 'package:designcter/calculator/calculator.dart';
+import 'package:designcter/servers/calculator/calculator.dart';
 
 void main () {
 
