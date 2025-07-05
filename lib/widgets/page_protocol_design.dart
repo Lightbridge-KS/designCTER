@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../designcter/designer.dart';
 import 'input_design.dart';
+import 'appbarbundle.dart';
 
 class ProtocolDesignPage extends StatefulWidget {
   final ThemeMode themeMode;
@@ -94,29 +95,15 @@ class _ProtocolDesignPageState extends State<ProtocolDesignPage> {
     );
   }
 
-  /// Get the appropriate theme icon based on current theme mode
-  IconData _getThemeIcon() {
-    // If system mode, check actual brightness
-    if (widget.themeMode == ThemeMode.system) {
-      final brightness = WidgetsBinding.instance.platformDispatcher.platformBrightness;
-      return brightness == Brightness.dark ? Icons.dark_mode_outlined : Icons.brightness_5;
-    }
-    
-    // For explicit light/dark modes
-    return widget.themeMode == ThemeMode.dark ? Icons.dark_mode_outlined : Icons.brightness_5;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBarBundle(
         title: const Text('Design CTER Protocol', style: TextStyle(fontWeight: FontWeight.bold)),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        leading: IconButton(
-          icon: Icon(_getThemeIcon()),
-          onPressed: widget.onThemeToggle,
-          tooltip: 'Toggle theme',
-        ),
+        iconDark: Icons.dark_mode_outlined,
+        iconLight: Icons.brightness_5,
+        themeMode: widget.themeMode,
+        onThemeToggle: widget.onThemeToggle,
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
