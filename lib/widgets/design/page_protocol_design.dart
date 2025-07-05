@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import '../../servers/designcter/designer.dart';
 import 'input_design.dart';
 import '../components/appbarbundle.dart';
+import '../components/buttons.dart';
 
 class ProtocolDesignPage extends StatefulWidget {
   final ThemeMode themeMode;
@@ -80,13 +81,6 @@ class _ProtocolDesignPageState extends State<ProtocolDesignPage> {
     });
   }
 
-  /// Copy output to clipboard
-  Future<void> _copyToClipboard() async {
-    if (_outputController.text.isNotEmpty) {
-      await Clipboard.setData(ClipboardData(text: _outputController.text));
-      _showSnackBar('Copied to clipboard');
-    }
-  }
 
   /// Show snackbar message
   void _showSnackBar(String message) {
@@ -227,20 +221,12 @@ class _ProtocolDesignPageState extends State<ProtocolDesignPage> {
             // Generate and Copy buttons
             Row(
               children: [
-                ElevatedButton.icon(
+                GenerateButton(
                   onPressed: _isSelectionComplete ? _generateProtocol : null,
-                  icon: const Icon(Icons.create),
-                  label: const Text('Generate'),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey[300],
-                    foregroundColor: Colors.black87,
-                    ),
                 ),
                 const SizedBox(width: 8),
-                IconButton(
-                  onPressed: _outputController.text.isNotEmpty ? _copyToClipboard : null,
-                  icon: const Icon(Icons.copy),
-                  tooltip: 'Copy to clipboard',
+                CopyButton(
+                  controller: _outputController,
                 ),
               ],
             ),
